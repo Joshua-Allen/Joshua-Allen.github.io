@@ -7,7 +7,6 @@ var post_fileLocations = [];
 $(document).ready(function()
 {
 	get_posts(2);
-	populateList("list");
 });
 
 // get all the posts
@@ -30,7 +29,8 @@ function get_post(index)
 	
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-			post_fileLocations.push("posts/post"+index+"/info.txt");
+			//post_fileLocations.push("posts/post"+index+"/info.txt");
+			post_fileLocations_add(index);
 		}
 	}
 	
@@ -41,8 +41,15 @@ function get_post(index)
 
 function populateList(id)
 {
+	$("#"+id).html("");
 	for	(index = 0; index < post_fileLocations.length; index++) {
 		$("#"+id).append(
 			"<li>" + post_fileLocations[index] + "</li>");
 	}
+}
+
+function post_fileLocations_add(item)
+{
+	post_fileLocations.push("posts/post"+item+"/info.txt");
+	populateList(id);
 }
