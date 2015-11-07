@@ -6,7 +6,7 @@ var post_fileLocations = [];
 // start it all off
 $(document).ready(function()
 {
-	
+	get_posts();
 });
 
 // get all the posts
