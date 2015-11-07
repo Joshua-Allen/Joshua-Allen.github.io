@@ -6,13 +6,14 @@ var post_fileLocations = [];
 // start it all off
 $(document).ready(function()
 {
-	get_posts();
+	get_posts(2);
+	populateList("list");
 });
 
 // get all the posts
-function get_posts()
+function get_posts(number)
 {
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < number; i++) {
 		get_post(i);
 	}
 }
@@ -36,4 +37,12 @@ function get_post(index)
 	//
 	xmlhttp.open("GET","posts/post"+index+"/info.txt",true);
 	xmlhttp.send();
+}
+
+function populateList(id)
+{
+	for	(index = 0; index < post_fileLocations.length; index++) {
+		$("#"+id).append(
+			"<li>" + post_fileLocations[index] + "</li>");
+	}
 }
