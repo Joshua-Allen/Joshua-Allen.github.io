@@ -51,5 +51,5 @@ function populateList(id)
 function post_fileLocations_add(item)
 {
 	post_fileLocations.push("posts/post"+item+"/info.txt");
-	populateList(id);
+	populateList("list");
 }
