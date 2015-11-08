@@ -1,5 +1,3 @@
-// need to add stuff
-
 // an array of all the posts as a url
 var post_fileLocations = [];
 
@@ -28,9 +26,17 @@ function get_post(index)
 	}
 	
 	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-			//post_fileLocations.push("posts/post"+index+"/info.txt");
-			post_fileLocations_add(index);
+		// wait to get the post
+		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
+		{
+			post_fileLocations.push("posts/post"+index+"/info.txt");
+			//post_fileLocations_add(index);
+			// can I call "get_post(index+1)"
+		}
+		// no more posts to look at
+		if (xmlhttp.status==404)
+		{
+			update_posts();
 		}
 	}
 	
@@ -48,8 +54,7 @@ function populateList(id)
 	}
 }
 
-function post_fileLocations_add(item)
+function update_posts()
 {
-	post_fileLocations.push("posts/post"+item+"/info.txt");
 	populateList("list");
 }
