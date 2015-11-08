@@ -30,6 +30,7 @@ function get_post(index)
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
 		{
 			post_fileLocations.push("posts/post"+index+"/info.txt");
+			get_post(index+1);
 			//post_fileLocations_add(index);
 			// can I call "get_post(index+1)"
 		}
