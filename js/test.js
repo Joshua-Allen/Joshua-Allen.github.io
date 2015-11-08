@@ -42,7 +42,7 @@ function get_post(index)
 	}
 	
 	//
-	xmlhttp.open("GET","posts/post"+index+"/info.txt",false);
+	xmlhttp.open("GET","posts/post"+index+"/info.txt",true);
 	xmlhttp.send();
 }
 
