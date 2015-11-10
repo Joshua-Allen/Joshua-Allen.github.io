@@ -4,6 +4,7 @@ header {
     text-align:center;
     padding:5px; 
 	margin-bottom:50px;
+	box-shadow: 10px 10px 5px grey;
 }
 nav {
     line-height:30px;
@@ -12,11 +13,14 @@ nav {
     width:200px;
     float:left;
     padding:5px; 
+	box-shadow: 10px 10px 5px grey;
 }
 section {
     width:350px;
     float:left;
     padding:10px; 
+	margin-left:50px;
+	box-shadow: 10px 10px 5px grey;
 }
 footer {
     background-color:black;
@@ -24,4 +28,6 @@ footer {
     clear:both;
     text-align:center;
     padding:5px; 
+	margin-top:50px;
+	box-shadow: 10px 10px 5px grey;
 }
