@@ -1,10 +1,11 @@
 header {
+	max-width: 500px;
     background-color:black;
     color:white;
     text-align:center;
     padding:5px; 
 	margin-bottom:50px;
-	box-shadow: 10px 10px 5px grey;
+	box-shadow: 0px 0px 30px 13px rgba(0,0,0,0.24);
 }
 nav {
     line-height:30px;
@@ -13,21 +14,22 @@ nav {
     width:200px;
     float:left;
     padding:5px; 
-	box-shadow: 10px 10px 5px grey;
+	box-shadow: 0px 0px 30px 13px rgba(0,0,0,0.24);
 }
 section {
     width:350px;
     float:left;
     padding:10px; 
 	margin-left:50px;
-	box-shadow: 10px 10px 5px grey;
+	box-shadow: 0px 0px 30px 13px rgba(0,0,0,0.24);
 }
 footer {
+	max-width: 500px;
     background-color:black;
     color:white;
     clear:both;
     text-align:center;
     padding:5px; 
 	margin-top:50px;
-	box-shadow: 10px 10px 5px grey;
+	box-shadow: 0px 0px 30px 13px rgba(0,0,0,0.24);
 }
