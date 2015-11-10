@@ -31,7 +31,7 @@ function get_post(index)
 		{
 			post_fileLocations.push("posts/post"+index+"/info.txt");
 			get_post(index+1);
-			//post_fileLocations_add(index);
+			// post_fileLocations_add(index);
 			// can I call "get_post(index+1)"
 		}
 		// no more posts to look at
