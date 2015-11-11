@@ -61,10 +61,10 @@ body {
 }
 
 #postDate {
-	text-indent: 10px;
 	float: left;
 	color: grey;
 	margin-top: 0px;
+	margin-bottom: 5px;
 }
 
 .center {
