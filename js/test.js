@@ -111,7 +111,7 @@ function populateList(id)
 		
 		
 		$("#"+id).append(
-				'<dt style="style="height: 2px; background-color: black; text-align: center"'+
+				'<dt style="style="height: 2px; background-color: black; text-align: center">'+
 				'<span style="background-color: white; position: relative; top: -0.5em;">' + date + "</span></dt>");
 		$("#"+id).append("<dt>" + link + "</dt>");
 	}
