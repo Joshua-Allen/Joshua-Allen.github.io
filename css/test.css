@@ -1,5 +1,5 @@
 header {
-	max-width: 800px;
+	width: 100%;
 	
     background-color:white;
     color:black;
@@ -75,5 +75,5 @@ body {
 
 .center {
     margin: auto;
-	width: 810px;
+	width: 1000px;
 }
