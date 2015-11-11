@@ -54,11 +54,15 @@ body {
     background-color: #F2F2F2;
 }
 
-#postList {
+#postLink {
 	float: left;
 	font-size: 14px;
 	line-height: 1;
-	padding = 0px;
+	padding = 0px;	
+}
+
+#postList {
+
 }
 
 #postDate {

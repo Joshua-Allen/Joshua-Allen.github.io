@@ -104,7 +104,7 @@ function populateList(id)
 		var address = "http://joshua-allen.github.io/?" + 
 					"id="+posts_info[index].Index + "&" +
 					"title="+posts_info[index].Title.replace(/ /g,"_");
-		var link = '<a href='+address+'>'+posts_info[index].Title+'</a>';
+		var link = '<a id = "postLink" href='+address+'>'+posts_info[index].Title+'</a>';
 		
 		var date = posts_info[index].Date;// id="postDate"
 		
