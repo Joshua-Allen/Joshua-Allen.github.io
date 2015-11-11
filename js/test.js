@@ -87,10 +87,35 @@ function update_page()
 //
 function set_page(index)
 {
+	var page = "special/startPage.html";
 	if(getQueryVariable("id"))
 	{
-		$("#mainSection").html("");
+		
 	}
+	
+	var xmlhttp;
+	if (window.XMLHttpRequest) {
+		xmlhttp=new XMLHttpRequest();
+	} else {
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	xmlhttp.onreadystatechange = function() {
+		// wait to get the post
+		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
+		{
+			$("#mainSection").html("");
+		}
+		// no more posts to look at
+		if (xmlhttp.status==404)
+		{
+			// update_page();
+		}
+	}
+	
+	//
+	xmlhttp.open("GET", "page", true);
+	xmlhttp.send();
 }
 
 //
