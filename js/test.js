@@ -106,10 +106,10 @@ function populateList(id)
 					"title="+posts_info[index].Title.replace(/ /g,"_");
 		var link = '<a href='+address+'>'+posts_info[index].Title+'</a>';
 		
-		var date = posts_info[index].Date;
+		var date = posts_info[index].Date;// id="postDate"
 		
-		$("#"+id).append('<p>' + link + "</p>");
-		$("#"+id).append('<p id="postDate">' + date + "</p>");
+		$("#"+id).append(link + "<br>" + '<span style="color:blue">' + date + '</span>');
+		//$("#"+id).append('<p>'  "</p>");
 	}
 }
 
