@@ -110,7 +110,9 @@ function populateList(id)
 		var date = "<p>"+posts_info[index].Date+"</p>";
 		
 		
-		$("#"+id).append('<dt style="background:#fff;padding:0 10px;">' + date + "</dt>");
+		$("#"+id).append(
+				'<dt style="background:#fff; padding:0 10px; width: 100%; text-align: center;'+
+				'border-bottom: 1px solid #000;line-height: 0.1em;margin: 10px 0 20px;">' + date + "</dt>");
 		$("#"+id).append("<dt>" + link + "</dt>");
 	}
 }
