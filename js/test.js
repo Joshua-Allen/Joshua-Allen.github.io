@@ -72,7 +72,7 @@ function add_post(xml, index)
 		
 		posts_info.push(post);
 		
-		post_numbers.push(number);
+		post_numbers.push(index);
 		//post_numbers.sort();
 	}
 }
