@@ -60,8 +60,7 @@ body {
 }
 
 #postList {
-	
-	margin-top: = 0px;
+	margin: 0px;
 	padding: 0px;
 	line-height: 15px;
 }
