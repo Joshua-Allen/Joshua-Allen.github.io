@@ -25,7 +25,7 @@ function get_posts(index)
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
 		{
 			add_post(xmlhttp, index);
-			get_post(index+1);
+			get_posts(index+1);
 		}
 		// no more posts to look at
 		if (xmlhttp.status==404)
