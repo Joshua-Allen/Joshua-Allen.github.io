@@ -111,7 +111,7 @@ function populateList(id)
 		$("#"+id).append(
 				'<span id = "postDate">' + date + '</span>' + 
 				"<br>" + link + "<br>" +
-				'<hr style="margin-bottom: 5px;">' +
+				'<hr style="margin-bottom: 10px;margin-top: 10px;">' +
 				'<br>');
 		//$("#"+id).append('<p>'  "</p>");
 	}
