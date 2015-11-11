@@ -111,8 +111,8 @@ function populateList(id)
 		
 		
 		$("#"+id).append(
-				'<dt style="background:#fff; padding:0 10px; width: 100%; text-align: center;'+
-				'border-bottom: 1px solid #000;line-height: 0.1em;margin: 10px 0 20px;">' + date + "</dt>");
+				'<dt style="style="height: 2px; background-color: black; text-align: center"'+
+				'<span style="background-color: white; position: relative; top: -0.5em;">' + date + "</span></dt>");
 		$("#"+id).append("<dt>" + link + "</dt>");
 	}
 }
