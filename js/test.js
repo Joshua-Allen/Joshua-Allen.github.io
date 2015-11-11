@@ -85,9 +85,12 @@ function update_page()
 }
 
 //
-function set_page()
+function set_page(index)
 {
-	
+	if(getQueryVariable("id"))
+	{
+		$("#mainSection").html("");
+	}
 }
 
 //
