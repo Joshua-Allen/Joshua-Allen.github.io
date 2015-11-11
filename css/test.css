@@ -57,12 +57,13 @@ body {
 #postLink {
 	float: left;
 	font-size: 14px;
-	line-height: 1;
+	line-height: 1px;
 	padding = 0px;	
 }
 
 #postList {
-
+	padding = 0px;
+	line-height: 1px;
 }
 
 #postDate {
