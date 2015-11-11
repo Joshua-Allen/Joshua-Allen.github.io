@@ -15,7 +15,7 @@ nav {
     line-height:30px;
     background-color:white;
     min-height:300px;
-    width:200px;
+    min-width:200px;
     float:left;
 	
 	padding-top: 0px;
@@ -30,7 +30,7 @@ nav {
 section {
     /* width:550px; */
 	width: 80%;
-    float:right;
+    /*float:right;*/
     padding:10px; 
 	
 	margin-left:25px;
