@@ -101,15 +101,15 @@ function populateList(id)
 	$("#"+id).html("");
 
 	for	(index = 0; index < posts_info.length; index++) {
-		var link = "http://joshua-allen.github.io/?" + 
+		var address = "http://joshua-allen.github.io/?" + 
 					"id="+posts_info[index].Index + "&" +
 					"title="+posts_info[index].Title.replace(/ /g,"_");
 					
-		var click = "onclick='post_click("+link+")'";
+		//var click = "onclick='post_click("+link+")'";
 		
+		var link = '<a href='+address+'>'+posts_info[index].Title+'</a>';
 		
-		
-		$("#"+id).append("<dt "+click+">" + posts_info[index].Title + "</dt>");
+		$("#"+id).append("<dt>" + link + "</dt>");
 	}
 }
 
