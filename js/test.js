@@ -104,11 +104,13 @@ function populateList(id)
 		var address = "http://joshua-allen.github.io/?" + 
 					"id="+posts_info[index].Index + "&" +
 					"title="+posts_info[index].Title.replace(/ /g,"_");
-					
-		//var click = "onclick='post_click("+link+")'";
-		
 		var link = '<a href='+address+'>'+posts_info[index].Title+'</a>';
 		
+		
+		var date = "<p>"+posts_info[index].Date+"</p>";
+		
+		
+		$("#"+id).append("<dt>" + date + "</dt>");
 		$("#"+id).append("<dt>" + link + "</dt>");
 	}
 }
