@@ -62,14 +62,14 @@ body {
 }
 
 #postList {
-	line-height: 0px;
+	line-height: 10px;
 }
 
 #postDate {
 	float: left;
 	font-size: 10px;
 	color: grey;
-	margin-top: 0px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
