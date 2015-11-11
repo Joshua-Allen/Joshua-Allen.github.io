@@ -108,7 +108,7 @@ function populateList(id)
 		
 		var date = posts_info[index].Date;
 		
-		$("#"+id).append('<p id="postList">' + link + "</p>");
+		$("#"+id).append('<p>' + link + "</p>");
 		$("#"+id).append('<p id="postDate">' + date + "</p>");
 	}
 }
