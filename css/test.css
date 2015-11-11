@@ -55,6 +55,7 @@ body {
 }
 
 #postList {
+	float: left;
 	font-size: 14px;
 	line-height: 1;
 	padding = 0px;
@@ -62,6 +63,7 @@ body {
 
 #postDate {
 	float: left;
+	font-size: 10px;
 	color: grey;
 	margin-top: 0px;
 	margin-bottom: 5px;
