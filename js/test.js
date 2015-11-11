@@ -80,5 +80,5 @@ function add_post(xml, index)
 //
 function update_page()
 {
-	populateList("list");
+	populateList("postList");
 }

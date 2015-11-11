@@ -50,6 +50,10 @@ body {
     background-color: #F2F2F2;
 }
 
+#postList {
+	line-height: 0.8;
+}
+
 .center {
     margin: auto;
 	width: 810px;
