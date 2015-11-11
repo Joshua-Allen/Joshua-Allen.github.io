@@ -112,7 +112,7 @@ function populateList(id)
 				'<span id = "postDate">' + date + '</span>' + 
 				"<br>" + link + 
 				'<hr style="margin-bottom: 0px;">' +
-				'<br style="margin-top: 0px;">');
+				'<br>');
 		//$("#"+id).append('<p>'  "</p>");
 	}
 }
