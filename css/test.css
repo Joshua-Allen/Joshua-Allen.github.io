@@ -58,6 +58,10 @@ body {
 	font-size: 14px;
 	line-height: 1;
 }
+#postDate {
+	font-size: 14px;
+	line-height: 1;
+}
 
 .center {
     margin: auto;
