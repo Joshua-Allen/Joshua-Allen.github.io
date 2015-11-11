@@ -115,7 +115,7 @@ function set_page(index)
 	}
 	
 	//
-	xmlhttp.open("GET", "page", true);
+	xmlhttp.open("GET", page, true);
 	xmlhttp.send();
 }
 
