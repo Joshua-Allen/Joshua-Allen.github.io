@@ -44,12 +44,12 @@ function populateList(id)
 {
 	$("#"+id).html("");
 	
-	for	(index = 0; index < post_fileLocations.length; index++) {
-		$("#"+id).append("<li>" + post_fileLocations[index] + "</li>");
-	}
+	//for	(index = 0; index < post_fileLocations.length; index++) {
+	//	$("#"+id).append("<li>" + post_fileLocations[index] + "</li>");
+	//}
 	
 	for	(index = 0; index < posts_info.length; index++) {
-		$("#"+id).append("<li>" + posts_info[index].Title + "</li>");
+		$("#"+id).append("<dt>" + posts_info[index].Title + "</dt>");
 	}
 }
 
