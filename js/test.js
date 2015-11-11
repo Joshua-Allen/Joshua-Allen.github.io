@@ -58,7 +58,7 @@ function populateList(id)
 function add_file_location(index)
 {
 	var location = "posts/post"+index+"/info.txt";
-	if (indexOf(location) == -1)
+	if (post_fileLocations.indexOf(location) == -1)
 	{
 		post_fileLocations.push(location);
 	}
