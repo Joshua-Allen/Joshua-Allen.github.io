@@ -7,6 +7,7 @@ var posts_info = [];
 $(document).ready(function()
 {
 	get_posts(0);
+	set_page();
 });
 
 //
@@ -84,13 +85,7 @@ function update_page()
 }
 
 //
-function post_click()
-{
-	
-}
-
-//
-function set_page(title)
+function set_page()
 {
 	
 }
@@ -106,13 +101,12 @@ function populateList(id)
 					"title="+posts_info[index].Title.replace(/ /g,"_");
 		var link = '<a id = "postLink" href='+address+'>'+posts_info[index].Title+'</a>';
 		
-		var date = posts_info[index].Date;// id="postDate"
+		var date = posts_info[index].Date;
 		
 		$("#"+id).append(
 				'<span id = "postDate">' + date + '</span>' + 
 				"<br>" + link + "<br>" +
 				'<hr style="margin-bottom: 3px; margin-top: 5px;">');
-		//$("#"+id).append('<p>'  "</p>"); + '<br>'
 	}
 }
 
