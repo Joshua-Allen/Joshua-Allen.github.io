@@ -49,7 +49,7 @@ function populateList(id)
 	}
 	
 	for	(index = 0; index < posts_info.length; index++) {
-		$("#"+id).append("<li>" + posts_info[index] + "</li>");
+		$("#"+id).append("<li>" + posts_info[index].Title + "</li>");
 	}
 }
 
