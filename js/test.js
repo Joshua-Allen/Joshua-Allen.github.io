@@ -104,7 +104,8 @@ function set_page(index)
 		// wait to get the post
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
 		{
-			$("#mainSection").html("");
+			$("#mainSection").html(xmlhttp);
+			
 		}
 		// no more posts to look at
 		if (xmlhttp.status==404)
