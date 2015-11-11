@@ -1,22 +1,16 @@
 // an array of all the posts as a url
+var post_numbers = [];
 var post_fileLocations = [];
+var posts_info = [];
 
 // start it all off
 $(document).ready(function()
 {
-	get_posts(2);
+	get_posts(0);
 });
 
-// get all the posts
-function get_posts(number)
-{
-	for (i = 0; i < number; i++) {
-		get_post(i);
-	}
-}
-
 //
-function get_post(index)
+function get_posts(index)
 {
 	var xmlhttp;
 	
@@ -30,7 +24,7 @@ function get_post(index)
 		// wait to get the post
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
 		{
-			add_file_location(index);
+			add_post(xmlhttp, index);
 			get_post(index+1);
 		}
 		// no more posts to look at
@@ -41,7 +35,7 @@ function get_post(index)
 	}
 	
 	//
-	xmlhttp.open("GET", "posts/post"+index+"/info.txt", true);
+	xmlhttp.open("GET", "posts/post"+index+".xml", true);
 	xmlhttp.send();
 }
 
@@ -49,18 +43,37 @@ function get_post(index)
 function populateList(id)
 {
 	$("#"+id).html("");
+	
 	for	(index = 0; index < post_fileLocations.length; index++) {
 		$("#"+id).append("<li>" + post_fileLocations[index] + "</li>");
+	}
+	
+	for	(index = 0; index < posts_info.length; index++) {
+		$("#"+id).append("<li>" + posts_info[index] + "</li>");
 	}
 }
 
 //
-function add_file_location(index)
+function add_post(xml, index)
 {
-	var location = "posts/post"+index+"/info.txt";
-	if (post_fileLocations.indexOf(location) == -1)
+	if (post_numbers.indexOf(index) == -1)
 	{
-		post_fileLocations.push(location);
+		var xmlDoc = xml.responseXML;
+		
+		var info = xmlDoc.getElementsByTagName("info")[0];
+		
+		var post = {
+			Title: info.getElementsByTagName("title")[0].childNodes[0].nodeValue,
+			Time: info.getElementsByTagName("time")[0].childNodes[0].nodeValue,
+			Date: info.getElementsByTagName("date")[0].childNodes[0].nodeValue,
+			Description: info.getElementsByTagName("description")[0].childNodes[0].nodeValue,
+			Index: index
+		}
+		
+		posts_info.push(post);
+		
+		post_numbers.push(number);
+		//post_numbers.sort();
 	}
 }
 

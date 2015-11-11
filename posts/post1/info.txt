@@ -1,3 +1,0 @@
-time:"7:51 AM"
-date:"11/08/2015"
-description:"This is a test of the 2ed blog post"
