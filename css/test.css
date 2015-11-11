@@ -30,7 +30,7 @@ nav {
 section {
     /* width:550px; */
 	width: 80%;
-    float:left;
+    float:right;
     padding:10px; 
 	
 	margin-left:25px;
@@ -76,5 +76,5 @@ body {
 
 .center {
     margin: auto;
-	width: 1000px;
+	width: 1010px;
 }
