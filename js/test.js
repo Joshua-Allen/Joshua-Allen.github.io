@@ -106,7 +106,7 @@ function populateList(id)
 					"title="+posts_info[index].Title.replace(/ /g,"_");
 		var link = '<a href='+address+'>'+posts_info[index].Title+'</a>';
 		
-		var date = "<p>"+posts_info[index].Date+"</p>";
+		var date = posts_info[index].Date;
 		
 		$("#"+id).append('<p id="postList">' + link + "</p>");
 		$("#"+id).append('<p id="postDate">' + date + "</p>");
