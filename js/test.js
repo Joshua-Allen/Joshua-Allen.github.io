@@ -15,6 +15,7 @@ function get_posts(number)
 	}
 }
 
+//
 function get_post(index)
 {
 	var xmlhttp;
@@ -29,33 +30,42 @@ function get_post(index)
 		// wait to get the post
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
 		{
-			post_fileLocations.push("posts/post"+index+"/info.txt");
+			add_file_location(index);
 			get_post(index+1);
-			// post_fileLocations_add(index);
-			// can I call "get_post(index+1)"
 		}
 		// no more posts to look at
 		if (xmlhttp.status==404)
 		{
-			update_posts();
+			update_page();
 		}
 	}
 	
 	//
-	xmlhttp.open("GET","posts/post"+index+"/info.txt",true);
+	xmlhttp.open("GET", "posts/post"+index+"/info.txt", true);
 	xmlhttp.send();
 }
 
+//
 function populateList(id)
 {
 	$("#"+id).html("");
 	for	(index = 0; index < post_fileLocations.length; index++) {
-		$("#"+id).append(
-			"<li>" + post_fileLocations[index] + "</li>");
+		$("#"+id).append("<li>" + post_fileLocations[index] + "</li>");
 	}
 }
 
-function update_posts()
+//
+function add_file_location(index)
+{
+	var location = "posts/post"+index+"/info.txt";
+	if (indexOf(location) == -1)
+	{
+		post_fileLocations.push(location);
+	}
+}
+
+//
+function update_page()
 {
 	populateList("list");
 }
