@@ -57,12 +57,11 @@ body {
 #postLink {
 	font-size: 14px;
 	padding-top: 0px;
-	/*float: left;
-	
-	*/
 }
 
 #postList {
+	
+	margin-top: = 0px;
 	padding: 0px;
 	line-height: 15px;
 }
@@ -73,7 +72,6 @@ body {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	float: right;
-	/**/
 }
 
 .center {
