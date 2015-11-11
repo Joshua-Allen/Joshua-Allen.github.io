@@ -58,11 +58,11 @@ body {
 	float: left;
 	font-size: 14px;
 	line-height: 1px;
-	padding = 0px;	
+	padding-top: 10px;
 }
 
 #postList {
-	padding = 0px;
+	padding: 0px;
 	line-height: 1px;
 }
 
