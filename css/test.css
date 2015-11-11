@@ -30,7 +30,7 @@ nav {
 section {
     /* width:550px; */
 	width: 80%;
-    /*float:right;*/
+    float: right;
     padding:10px; 
 	
 	margin-left:25px;
