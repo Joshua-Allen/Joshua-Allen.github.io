@@ -40,20 +40,6 @@ function get_posts(index)
 }
 
 //
-function populateList(id)
-{
-	$("#"+id).html("");
-	
-	//for	(index = 0; index < post_fileLocations.length; index++) {
-	//	$("#"+id).append("<li>" + post_fileLocations[index] + "</li>");
-	//}
-	
-	for	(index = 0; index < posts_info.length; index++) {
-		$("#"+id).append("<dt>" + posts_info[index].Title + "</dt>");
-	}
-}
-
-//
 function add_post(xml, index)
 {
 	if (post_numbers.indexOf(index) == -1)
@@ -78,7 +64,78 @@ function add_post(xml, index)
 }
 
 //
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
 function update_page()
 {
 	populateList("postList");
 }
+
+//
+function post_click()
+{
+	
+}
+
+//
+function set_page(title)
+{
+	
+}
+
+//
+function populateList(id)
+{
+	$("#"+id).html("");
+
+	for	(index = 0; index < posts_info.length; index++) {
+		var link = "http://joshua-allen.github.io/?" + 
+					"id="+posts_info[index].Index + "&" +
+					"title="+posts_info[index].Title.replace(/ /g,"_");
+					
+		var click = "onclick='post_click("+link+")'";
+		
+		
+		
+		$("#"+id).append("<dt "+click+">" + posts_info[index].Title + "</dt>");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
