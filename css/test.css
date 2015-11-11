@@ -57,10 +57,13 @@ body {
 #postList {
 	font-size: 14px;
 	line-height: 1;
+	padding = 0px;
 }
 #postDate {
 	font-size: 14px;
 	line-height: 1;
+	float: right;
+	padding = 0px;
 }
 
 .center {
