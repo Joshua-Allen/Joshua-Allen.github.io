@@ -55,10 +55,10 @@ body {
 }
 
 #postLink {
-	float: left;
+	/*float: left;
 	font-size: 14px;
 	line-height: 1px;
-	padding-top: 10px;
+	padding-top: 10px;*/
 }
 
 #postList {
@@ -66,11 +66,11 @@ body {
 }
 
 #postDate {
-	float: left;
+	/*float: left;
 	font-size: 10px;
 	color: grey;
 	margin-top: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 10px;*/
 }
 
 .center {
