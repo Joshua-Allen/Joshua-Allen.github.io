@@ -83,10 +83,11 @@ function update_page()
 }
 
 //
-function set_page(index)
+function set_page()
 {
 	var page = "special/startPage.html";
-	if(getQueryVariable("id"))
+	var index = getQueryVariable("id");
+	if(index != false)
 	{
 		page = "posts/post"+index+"/page.html";
 	}
