@@ -104,7 +104,7 @@ function set_page()
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
 		{
 			$("#mainSection").html(xmlhttp.responseText);
-			
+			document.getElementById("mainSectionStyle").setAttribute("href", "posts/post"+index+"/style.css"); 
 		}
 		// no more posts to look at
 		if (xmlhttp.status==404)
