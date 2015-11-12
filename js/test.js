@@ -35,8 +35,7 @@ function get_posts(index)
 		}
 	}
 	
-	//
-	xmlhttp.open("GET", "posts/post"+index+".xml", true);
+	xmlhttp.open("GET", "posts/post"+index+"/post"+index+".xml", true);
 	xmlhttp.send();
 }
 
@@ -60,7 +59,6 @@ function add_post(xml, index)
 		posts_info.push(post);
 		
 		post_numbers.push(index);
-		//post_numbers.sort();
 	}
 }
 
@@ -90,7 +88,7 @@ function set_page(index)
 	var page = "special/startPage.html";
 	if(getQueryVariable("id"))
 	{
-		
+		page = "posts/post"+index+"/page.html";
 	}
 	
 	var xmlhttp;
@@ -114,7 +112,6 @@ function set_page(index)
 		}
 	}
 	
-	//
 	xmlhttp.open("GET", page, true);
 	xmlhttp.send();
 }
