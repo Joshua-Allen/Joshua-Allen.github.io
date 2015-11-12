@@ -85,11 +85,13 @@ function update_page()
 //
 function set_page()
 {
-	var page = "special/startPage.html";
+	var page = "special/startPage/startPage.html";
+	var style = "special/startPage/style.css"
 	var index = getQueryVariable("id");
 	if(index != -1)
 	{
 		page = "posts/post"+index+"/page.html";
+		style = "posts/post"+index+"/style.css"
 	}
 	
 	var xmlhttp;
@@ -104,7 +106,7 @@ function set_page()
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) 
 		{
 			$("#mainSection").html(xmlhttp.responseText);
-			document.getElementById("mainSectionStyle").setAttribute("href", "posts/post"+index+"/style.css"); 
+			document.getElementById("mainSectionStyle").setAttribute("href", style); 
 		}
 		// no more posts to look at
 		if (xmlhttp.status==404)
