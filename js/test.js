@@ -71,7 +71,7 @@ function getQueryVariable(variable)
                var pair = vars[i].split("=");
                if(pair[0] == variable){return pair[1];}
        }
-       return(false);
+       return -1;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,7 +87,7 @@ function set_page()
 {
 	var page = "special/startPage.html";
 	var index = getQueryVariable("id");
-	if(index != false)
+	if(index != -1)
 	{
 		page = "posts/post"+index+"/page.html";
 	}
