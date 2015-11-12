@@ -56,7 +56,7 @@ function add_post(xml, index)
 			Index: index
 		}
 		
-		posts_info.push(post);
+		posts_info.unshift(post);
 		
 		post_numbers.push(index);
 	}
