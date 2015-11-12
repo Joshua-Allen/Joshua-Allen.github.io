@@ -38,6 +38,10 @@ section {
 	
 	box-shadow: 0px 0px 43px 6px rgba(0,0,0,0.15);
 }
+section > div{
+	max-width: 880px;
+}
+
 footer {
 	width: 100%;
     background-color:white;
