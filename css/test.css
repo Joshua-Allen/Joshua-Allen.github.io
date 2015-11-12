@@ -28,6 +28,8 @@ nav {
 section {
     padding:0px; 
 	
+	max-width: 880px;
+	
 	margin-left:230px;
 	margin-bottom:50px;
 	margin-right:0px;
