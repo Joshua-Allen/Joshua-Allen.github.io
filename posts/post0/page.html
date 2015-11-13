@@ -15,7 +15,9 @@ Posts
 <p id = "sP">
 My goal at the very beginning was to not hard code things. What I wanted was to drop a file into a directory and have everything just work. That ended up being a pain in the ass. I got jquery to get an xml file, that was all well and good but I could not find a way to make a list of sub directories. I spent far too long on how to do this. 
 After a lot of trial and error I got it working almost perfectly. What I ended up doing was separating my posts by putting them in a folder with a number index. So a post location is:
+<p id = "code">
 “posts/post" + index + "/post.xml"
+</p>
 I said that this almost works because what I’m doing is check if the file exists and if it does add it to an array and recourse with index+1. This causes a 404 error in the debug console and I really don’t like that but there is nothing I can to about it. 
 </p>
 </div>
