@@ -62,7 +62,7 @@ function lifeUpdate()
 		}
 	}
 	
-	life = newLife;
+	Array.prototype.splice.apply(life, [0, newlife.length].concat(newlife));
 }
 function lifeGetCell(x, y)
 {
