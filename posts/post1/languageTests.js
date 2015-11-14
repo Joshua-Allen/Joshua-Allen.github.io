@@ -131,7 +131,7 @@ function render()
 	
 	
 	current_context = ctx_light;
-	draw_line(0, 0, lightCanvas.width, lightCanvas.height);
+	//draw_line(0, 0, lightCanvas.width, lightCanvas.height);
 	
 	//
 	//current_canvas = lifeCanvas;
