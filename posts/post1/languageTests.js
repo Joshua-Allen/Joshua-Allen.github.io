@@ -115,7 +115,7 @@ function render_life()
 //
 function render()
 {
-	//console.log(5);
+	console.log(1);
 	
 	//
 	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
