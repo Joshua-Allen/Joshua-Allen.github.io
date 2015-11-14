@@ -22,6 +22,8 @@ var numCells_y = (ctx_life.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 
 
+console.log("ctx_life = " + lifeCanvas);
+console.log("ctx_life = " + ctx_life);
 
 console.log("ctx_life.width = " + ctx_life.width);
 console.log("ctx_life.height = " + ctx_life.height);
