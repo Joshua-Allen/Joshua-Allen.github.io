@@ -7,7 +7,7 @@ setInterval(draw, 1000);
 function draw()
 {
 	ctx.moveTo(0,0);
-	ctx.lineTo(200,100);
+	ctx.lineTo(200,200*Math.random());
 	ctx.stroke();
 }
 
