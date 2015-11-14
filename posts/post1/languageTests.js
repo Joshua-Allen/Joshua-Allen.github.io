@@ -88,24 +88,7 @@ function lifeUpdate()
 	
 	Array.prototype.splice.apply(life, [0, newlife.length].concat(newlife));
 }
-function render_life()
-{
-	var x = 0;
-	var y = 0;
-	for (i = 0; i < numberOfCells; i++) 
-	{
-		if (life[i])
-		{
-			draw_rect(x*cellSize,y*cellSize,cellSize,cellSize);
-		}
-		x++;
-		if (x > numCells_x)
-		{
-			x = 0;
-			y++;
-		}
-	}
-}
+
 
 
 //
@@ -137,6 +120,24 @@ function render()
 	//render_life();
 }
 
+function render_life()
+{
+	var x = 0;
+	var y = 0;
+	for (i = 0; i < numberOfCells; i++) 
+	{
+		if (life[i])
+		{
+			draw_rect(x*cellSize,y*cellSize,cellSize,cellSize);
+		}
+		x++;
+		if (x > numCells_x)
+		{
+			x = 0;
+			y++;
+		}
+	}
+}
 
 
 
