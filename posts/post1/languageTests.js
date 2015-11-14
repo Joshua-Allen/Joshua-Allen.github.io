@@ -10,10 +10,6 @@ var ctx_light = lightCanvas.getContext("2d");
 var current_canvas = lifeCanvas;
 var current_context = ctx_life;
 
-
-
-
-
 // life
 var life = [];
 var cellSize = 5;
@@ -22,7 +18,7 @@ var numCells_y = (ctx_life.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 
 
-console.log("ctx_life = " + lifeCanvas);
+console.log("lifeCanvas = " + lifeCanvas);
 console.log("ctx_life = " + ctx_life);
 
 console.log("ctx_life.width = " + ctx_life.width);
@@ -34,10 +30,27 @@ console.log("numCells_y = " + numCells_y);
 console.log("numberOfCells = " + numberOfCells);
 
 
-lifeStart();
 setInterval(render, 1000/60);
 
+function initialize()
+{
+	lifeStart();
+	
+	lifeCanvas = document.getElementById("lifeCanvas");
+	AstarCanvas = document.getElementById("AstarCanvas");
+	lightCanvas = document.getElementById("lightCanvas");
+	
+	ctx_life = lifeCanvas.getContext("2d");
+	ctx_Astar = AstarCanvas.getContext("2d");
+	ctx_light = lightCanvas.getContext("2d");
+	
+	current_canvas = lifeCanvas;
+	current_context = ctx_life;
+	
+	
+}
 
+// 
 function lifeStart()
 {
 	for (i = 0; i < numberOfCells; i++) 
