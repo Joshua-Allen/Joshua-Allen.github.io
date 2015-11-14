@@ -17,7 +17,7 @@ var numCells_x = (ctx_life.width / cellSize);
 var numCells_y = (ctx_life.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 
-
+/*
 console.log("lifeCanvas = " + lifeCanvas);
 console.log("ctx_life = " + ctx_life);
 
@@ -28,7 +28,7 @@ console.log("cellSize = " + cellSize);
 console.log("numCells_x = " + numCells_x);
 console.log("numCells_y = " + numCells_y);
 console.log("numberOfCells = " + numberOfCells);
-
+*/
 
 setInterval(render, 1000/60);
 
@@ -60,6 +60,8 @@ function lifeUpdate()
 	numCells_x = (ctx_life.width / cellSize);
 	numCells_y = (ctx_life.height / cellSize);
 	numberOfCells = numCells_x * numCells_y;
+	
+	console.log("numCells_x - " + numCells_x);
 	
 	var newlife = [];
 	for (x = 0; x < numCells_x; x++) 
@@ -150,7 +152,7 @@ function render()
 	
 	//
 	current_context = ctx_life;
-	draw_line(0, 0, lifeCanvas.width, lifeCanvas.height);
+	//draw_line(0, 0, lifeCanvas.width, lifeCanvas.height);
 	lifeUpdate();
 	render_life();
 	
