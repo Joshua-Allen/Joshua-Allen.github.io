@@ -132,6 +132,9 @@ function render()
 	ctx_Astar = AstarCanvas.getContext("2d");
 	ctx_light = lightCanvas.getContext("2d");
 	
+	console.log("ctx_life = " + ctx_life);
+	console.log("ctx_life.width = " + ctx_life.width);
+	
 	//
 	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
 	ctx_Astar.clearRect(0, 0, AstarCanvas.width, AstarCanvas.height);
