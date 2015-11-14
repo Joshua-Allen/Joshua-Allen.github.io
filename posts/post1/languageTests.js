@@ -120,8 +120,12 @@ function render()
 	
 	current_context = ctx_life;
 	draw_line(0, 0, lifeCanvas.width, lifeCanvas.height);
+	render_life();
+	
 	current_context = ctx_Astar;
 	draw_line(0, 0, AstarCanvas.width, AstarCanvas.height);
+	
+	
 	current_context = ctx_light;
 	draw_line(0, 0, lightCanvas.width, lightCanvas.height);
 	
