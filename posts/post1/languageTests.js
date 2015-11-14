@@ -21,7 +21,7 @@ function lifeStart()
 }
 function lifeUpdate()
 {
-	var newlife[];
+	var newlife = [];
 	for (x = 0; x < numCells_x; x++) 
 	{
 		for (y = 0; y < numCells_y; y++) 
