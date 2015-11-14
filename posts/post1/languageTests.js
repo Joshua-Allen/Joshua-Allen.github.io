@@ -22,10 +22,14 @@ var numCells_y = (ctx_life.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 
 
-console.log(cellSize);
-console.log(numCells_x);
-console.log(numCells_y);
-console.log(numberOfCells);
+
+console.log("ctx_life.width = " + ctx_life.width);
+console.log("ctx_life.height = " + ctx_life.height);
+
+console.log("cellSize = " + cellSize);
+console.log("numCells_x = " + numCells_x);
+console.log("numCells_y = " + numCells_y);
+console.log("numberOfCells = " + numberOfCells);
 
 
 lifeStart();
