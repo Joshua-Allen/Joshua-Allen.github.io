@@ -6,7 +6,7 @@ setInterval(draw, 1);
 //
 function draw()
 {
-	ctx.fillStyle = "#000000";
+	ctx.fillStyle = "#FFFFFF";
 	ctx.fillRect(0,0,200,200);
 
 	ctx.moveTo(0,0);
