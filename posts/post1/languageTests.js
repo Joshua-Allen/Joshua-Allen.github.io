@@ -57,6 +57,10 @@ function lifeSetCell(array, x, y, val)
 }
 function lifeUpdate()
 {
+	numCells_x = (ctx_life.width / cellSize);
+	numCells_y = (ctx_life.height / cellSize);
+	numberOfCells = numCells_x * numCells_y;
+	
 	var newlife = [];
 	for (x = 0; x < numCells_x; x++) 
 	{
@@ -137,7 +141,7 @@ function render()
 	ctx_Astar = AstarCanvas.getContext("2d");
 	ctx_light = lightCanvas.getContext("2d");
 	
-	console.log("lifeCanvas = " + lifeCanvas + "  -  " +"ctx_life = " + ctx_life + "  -  " + "ctx_life.width = " + lifeCanvas.width);
+	//console.log("lifeCanvas = " + lifeCanvas + "  -  " +"ctx_life = " + ctx_life + "  -  " + "ctx_life.width = " + lifeCanvas.width);
 	
 	//
 	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
