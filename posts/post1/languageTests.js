@@ -21,6 +21,13 @@ var numCells_x = (ctx_life.width / cellSize);
 var numCells_y = (ctx_life.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 
+
+console.log(cellSize);
+console.log(numCells_x);
+console.log(numCells_y);
+console.log(numberOfCells);
+
+
 lifeStart();
 setInterval(render, 1000/60);
 
@@ -96,7 +103,7 @@ function render_life()
 {
 	var x = 0;
 	var y = 0;
-	console.log(numberOfCells);
+	
 	for (i = 0; i < numberOfCells; i++) 
 	{
 		if (life[i])
