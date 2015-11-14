@@ -30,7 +30,7 @@ console.log("numCells_y = " + numCells_y);
 console.log("numberOfCells = " + numberOfCells);
 */
 
-setInterval(render, 1000/60);
+setInterval(render, 1000/30);
 
 lifeStart();
 
@@ -105,8 +105,6 @@ function lifeUpdate()
 	
 	Array.prototype.splice.apply(life, [0, newlife.length].concat(newlife));
 }
-
-
 function render_life()
 {
 	var x = 0;
@@ -132,19 +130,6 @@ function render_life()
 //
 function render()
 {
-	/*
-	//
-	lifeCanvas = document.getElementById("lifeCanvas");
-	AstarCanvas = document.getElementById("AstarCanvas");
-	lightCanvas = document.getElementById("lightCanvas");
-	
-	//
-	ctx_life = lifeCanvas.getContext("2d");
-	ctx_Astar = AstarCanvas.getContext("2d");
-	ctx_light = lightCanvas.getContext("2d");
-	
-	//console.log("lifeCanvas = " + lifeCanvas + "  -  " +"ctx_life = " + ctx_life + "  -  " + "ctx_life.width = " + lifeCanvas.width);
-	*/
 	//
 	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
 	ctx_Astar.clearRect(0, 0, AstarCanvas.width, AstarCanvas.height);
@@ -163,15 +148,7 @@ function render()
 	//
 	current_context = ctx_light;
 	draw_line(0, 0, lightCanvas.width, lightCanvas.height);
-	
-	//
-	//current_canvas = lifeCanvas;
-	//current_context = ctx_life;
-	
-	//lifeUpdate();
-	//render_life();
 }
-
 
 
 // draw helper
