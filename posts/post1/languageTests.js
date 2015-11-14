@@ -13,8 +13,8 @@ var current_context = ctx_life;
 // life
 var life = [];
 var cellSize = 5;
-var numCells_x = (ctx_life.width / cellSize);
-var numCells_y = (ctx_life.height / cellSize);
+var numCells_x = (lifeCanvas.width / cellSize);
+var numCells_y = (lifeCanvas.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 
 /*
