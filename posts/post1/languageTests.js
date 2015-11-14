@@ -3,12 +3,41 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 setInterval(render, 1000/60);
 
+var life = [];
+var cellSize = 10;
+var numberOfCells = (myCanvas.width / cellSize) * (myCanvas.height / cellSize);
+	
+lifeStart();
+
+//
+function lifeStart()
+{
+	for (i = 0; i < numberOfCells; i++) 
+	{
+		life[i] = (100*Math.random() < 10);
+	}
+}
+
 //
 function render()
 {
 	//ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
 
-	draw_point(200*Math.random(),200*Math.random())
+	var x = 0;
+	var y = 0;
+	for (i = 0; i < numberOfCells; i++) 
+	{
+		if (life[i])
+		{
+			draw_rect(x,y,cellSize,cellSize);
+		}
+		x += cellSize;
+		if (x > myCanvas.width/cellSize)
+		{
+			x = 0;
+			y += cellSize;
+		}
+	}
 }
 
 function draw_line(x1, y1, x2, y2)
