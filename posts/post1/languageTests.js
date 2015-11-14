@@ -12,15 +12,17 @@ var current_context = ctx_life;
 
 setInterval(render, 1000/60);
 
+
+
+// life
 var life = [];
 var cellSize = 5;
 var numCells_x = (ctx_life.width / cellSize);
 var numCells_y = (ctx_life.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
-	
+
 lifeStart();
 
-//
 function lifeStart()
 {
 	for (i = 0; i < numberOfCells; i++) 
@@ -105,9 +107,13 @@ function render_life()
 	}
 }
 
+
 //
 function render()
 {
+	console.log(5);
+	
+	//
 	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
 	ctx_Astar.clearRect(0, 0, AstarCanvas.width, AstarCanvas.height);
 	ctx_light.clearRect(0, 0, lightCanvas.width, lightCanvas.height);
