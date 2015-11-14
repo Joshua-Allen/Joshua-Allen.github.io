@@ -57,8 +57,8 @@ function lifeSetCell(array, x, y, val)
 }
 function lifeUpdate()
 {
-	numCells_x = (ctx_life.width / cellSize);
-	numCells_y = (ctx_life.height / cellSize);
+	numCells_x = (lifeCanvas.width / cellSize);
+	numCells_y = (lifeCanvas.height / cellSize);
 	numberOfCells = numCells_x * numCells_y;
 	
 	console.log("numCells_x - " + numCells_x);
