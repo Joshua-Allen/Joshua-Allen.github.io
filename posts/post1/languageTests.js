@@ -96,6 +96,7 @@ function render_life()
 {
 	var x = 0;
 	var y = 0;
+	console.log(numberOfCells);
 	for (i = 0; i < numberOfCells; i++) 
 	{
 		if (life[i])
@@ -107,7 +108,7 @@ function render_life()
 		{
 			x = 0;
 			y++;
-			console.log(y);
+			
 		}
 	}
 }
