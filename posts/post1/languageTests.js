@@ -3,9 +3,9 @@ var lifeCanvas = document.getElementById("lifeCanvas");
 var AstarCanvas = document.getElementById("AstarCanvas");
 var lightCanvas = document.getElementById("lightCanvas");
 
-var ctx_life = canvas.getContext("2d");
-var ctx_Astar = canvas.getContext("2d");
-var ctx_light = canvas.getContext("2d");
+var ctx_life = lifeCanvas.getContext("2d");
+var ctx_Astar = AstarCanvas.getContext("2d");
+var ctx_light = lightCanvas.getContext("2d");
 
 var current_canvas = lifeCanvas;
 var current_context = ctx_life;
