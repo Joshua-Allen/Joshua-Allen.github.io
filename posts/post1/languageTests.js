@@ -1,12 +1,21 @@
 // an array of all the posts as a url
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+var lifeCanvas = document.getElementById("lifeCanvas");
+var AstarCanvas = document.getElementById("AstarCanvas");
+var lightCanvas = document.getElementById("lightCanvas");
+
+var ctx_life = canvas.getContext("2d");
+var ctx_Astar = canvas.getContext("2d");
+var ctx_light = canvas.getContext("2d");
+
+var current_canvas = lifeCanvas;
+var current_context = ctx_life;
+
 setInterval(render, 1000/60);
 
 var life = [];
 var cellSize = 5;
-var numCells_x = (myCanvas.width / cellSize);
-var numCells_y = (myCanvas.height / cellSize);
+var numCells_x = (ctx_life.width / cellSize);
+var numCells_y = (ctx_life.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 	
 lifeStart();
@@ -18,6 +27,19 @@ function lifeStart()
 	{
 		life[i] = (100*Math.random() < 10);
 	}
+}
+function lifeGetCell(x, y)
+{
+	if (y < 0 || y > numCells_y) 
+		return 0;
+	if (x < 0 || x > numCells_x) 
+		return 0;
+	
+	return life[x+y*numCells_x];
+}
+function lifeSetCell(array, x, y, val)
+{
+	array[x+y*numCells_x] = val;
 }
 function lifeUpdate()
 {
@@ -64,28 +86,8 @@ function lifeUpdate()
 	
 	Array.prototype.splice.apply(life, [0, newlife.length].concat(newlife));
 }
-function lifeGetCell(x, y)
+function render_life()
 {
-	if (y < 0 || y > numCells_y) 
-		return 0;
-	if (x < 0 || x > numCells_x) 
-		return 0;
-	
-	return life[x+y*numCells_x];
-}
-function lifeSetCell(array, x, y, val)
-{
-	array[x+y*numCells_x] = val;
-}
-
-
-//
-function render()
-{
-	ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
-	
-	lifeUpdate()
-
 	var x = 0;
 	var y = 0;
 	for (i = 0; i < numberOfCells; i++) 
@@ -103,29 +105,48 @@ function render()
 	}
 }
 
+//
+function render()
+{
+	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
+	ctx_Astar.clearRect(0, 0, AstarCanvas.width, AstarCanvas.height);
+	ctx_light.clearRect(0, 0, lightCanvas.width, lightCanvas.height);
+	
+	//
+	current_canvas = lifeCanvas;
+	lifeUpdate();
+	render_life();
+	
+	
+}
+
+
+
+
+// draw helper
 function draw_line(x1, y1, x2, y2)
 {
-	ctx.beginPath();
-	ctx.moveTo(x1,y1);
-	ctx.lineTo(x2,y2);
-	ctx.stroke();
+	current_context.beginPath();
+	current_context.moveTo(x1,y1);
+	current_context.lineTo(x2,y2);
+	current_context.stroke();
 }
 
 function draw_circle(x, y, r)
 {
-	ctx.beginPath();
-	ctx.arc(x,y,r,0,2*Math.PI);
-	ctx.stroke();
+	current_context.beginPath();
+	current_context.arc(x,y,r,0,2*Math.PI);
+	current_context.stroke();
 }
 
 function draw_rect(x,y,width,height)
 {
-	ctx.fillRect(x,y,width,height);
+	current_context.fillRect(x,y,width,height);
 }
 
 function draw_point(x,y)
 {
-	ctx.fillRect(x,y,1,1);
+	current_context.fillRect(x,y,1,1);
 }
 
 
