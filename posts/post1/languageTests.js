@@ -5,7 +5,9 @@ setInterval(render, 1000/60);
 
 var life = [];
 var cellSize = 10;
-var numberOfCells = (myCanvas.width / cellSize) * (myCanvas.height / cellSize);
+var numCells_x = (myCanvas.width / cellSize);
+var numCells_y = (myCanvas.height / cellSize);
+var numberOfCells = numCells_x * numCells_y;
 	
 lifeStart();
 
@@ -29,13 +31,13 @@ function render()
 	{
 		if (life[i])
 		{
-			draw_rect(x,y,cellSize,cellSize);
+			draw_rect(x*cellSize,y*cellSize,cellSize,cellSize);
 		}
-		x += cellSize;
-		if (x > myCanvas.width/cellSize)
+		x++;
+		if (x > numCells_x)
 		{
 			x = 0;
-			y += cellSize;
+			y++;
 		}
 	}
 }
