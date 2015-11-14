@@ -19,11 +19,72 @@ function lifeStart()
 		life[i] = (100*Math.random() < 10);
 	}
 }
+function lifeUpdate()
+{
+	var newlife[];
+	for (x = 0; x < numCells_x; x++) 
+	{
+		for (y = 0; y < numCells_y; y++) 
+		{
+			var c = lifeGetCell(x,y);
+			
+			var c1 = lifeGetCell(x-1,y-1);
+			var c2 = lifeGetCell(x  ,y-1);
+			var c3 = lifeGetCell(x+1,y-1);
+			var c4 = lifeGetCell(x-1,y  );
+			var c5 = lifeGetCell(x+1,y  );
+			var c6 = lifeGetCell(x-1,y+1);
+			var c7 = lifeGetCell(x  ,y+1);
+			var c8 = lifeGetCell(x+1,y+1);
+			
+			var total = c1+c2+c3+c4+c5+c6+c7+c8;
+			
+			lifeSetCell(newlife, x, y, false);
+			if (c){
+				if (total < 2)
+				{
+					lifeSetCell(newlife, x, y, false);
+				}
+				if (total == 2 || total == 3)
+				{
+					lifeSetCell(newlife, x, y, true);
+				}
+				if (total > 3)
+				{
+					lifeSetCell(newlife, x, y, false);
+				}
+			} else {
+				if (total == 3)
+				{
+					lifeSetCell(newlife, x, y, true);
+				}
+			}
+		}
+	}
+	
+	life = newLife;
+}
+function lifeGetCell(x, y)
+{
+	if (y < 0 || y > numCells_y) 
+		return 0;
+	if (x < 0 || x > numCells_x) 
+		return 0;
+	
+	return life[x+y*numCells_x];
+}
+function lifeSetCell(array, x, y, val)
+{
+	array[x+y*numCells_x] = val;
+}
+
 
 //
 function render()
 {
-	//ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+	ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+	
+	lifeUpdate()
 
 	var x = 0;
 	var y = 0;
