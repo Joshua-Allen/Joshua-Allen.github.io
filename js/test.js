@@ -35,7 +35,7 @@ function get_posts(index)
 		}
 	}
 	
-	xmlhttp.open("GET", "posts/post"+index+"/post"+index+".xml", true);
+	xmlhttp.open("GET", "posts/post"+index+"/info.xml", true);
 	xmlhttp.send();
 }
 
