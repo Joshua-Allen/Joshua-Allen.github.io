@@ -128,6 +128,11 @@ function render_life()
 function render()
 {
 	//
+	lifeCanvas = document.getElementById("lifeCanvas");
+	AstarCanvas = document.getElementById("AstarCanvas");
+	lightCanvas = document.getElementById("lightCanvas");
+	
+	//
 	ctx_life = lifeCanvas.getContext("2d");
 	ctx_Astar = AstarCanvas.getContext("2d");
 	ctx_light = lightCanvas.getContext("2d");
