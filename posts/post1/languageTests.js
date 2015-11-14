@@ -66,7 +66,6 @@ function lifeUpdate()
 	{
 		for (y = 0; y < numCells_y; y++) 
 		{
-			console.log("numCells_x - ");
 			
 			var c = lifeGetCell(x,y);
 			
@@ -133,6 +132,7 @@ function render_life()
 //
 function render()
 {
+	/*
 	//
 	lifeCanvas = document.getElementById("lifeCanvas");
 	AstarCanvas = document.getElementById("AstarCanvas");
@@ -144,7 +144,7 @@ function render()
 	ctx_light = lightCanvas.getContext("2d");
 	
 	//console.log("lifeCanvas = " + lifeCanvas + "  -  " +"ctx_life = " + ctx_life + "  -  " + "ctx_life.width = " + lifeCanvas.width);
-	
+	*/
 	//
 	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
 	ctx_Astar.clearRect(0, 0, AstarCanvas.width, AstarCanvas.height);
