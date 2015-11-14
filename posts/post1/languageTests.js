@@ -32,23 +32,7 @@ console.log("numberOfCells = " + numberOfCells);
 
 setInterval(render, 1000/60);
 
-function initialize()
-{
-	lifeStart();
-	
-	lifeCanvas = document.getElementById("lifeCanvas");
-	AstarCanvas = document.getElementById("AstarCanvas");
-	lightCanvas = document.getElementById("lightCanvas");
-	
-	ctx_life = lifeCanvas.getContext("2d");
-	ctx_Astar = AstarCanvas.getContext("2d");
-	ctx_light = lightCanvas.getContext("2d");
-	
-	current_canvas = lifeCanvas;
-	current_context = ctx_life;
-	
-	
-}
+lifeStart();
 
 // 
 function lifeStart()
@@ -143,7 +127,10 @@ function render_life()
 //
 function render()
 {
-	
+	//
+	ctx_life = lifeCanvas.getContext("2d");
+	ctx_Astar = AstarCanvas.getContext("2d");
+	ctx_light = lightCanvas.getContext("2d");
 	
 	//
 	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
