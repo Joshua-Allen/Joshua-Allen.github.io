@@ -107,6 +107,7 @@ function render_life()
 		{
 			x = 0;
 			y++;
+			console.log(y);
 		}
 	}
 }
@@ -115,23 +116,26 @@ function render_life()
 //
 function render()
 {
-	console.log(2);
+	
 	
 	//
 	ctx_life.clearRect(0, 0, lifeCanvas.width, lifeCanvas.height);
 	ctx_Astar.clearRect(0, 0, AstarCanvas.width, AstarCanvas.height);
 	ctx_light.clearRect(0, 0, lightCanvas.width, lightCanvas.height);
 	
+	//
 	current_context = ctx_life;
 	draw_line(0, 0, lifeCanvas.width, lifeCanvas.height);
+	lifeUpdate();
 	render_life();
 	
+	//
 	current_context = ctx_Astar;
 	draw_line(0, 0, AstarCanvas.width, AstarCanvas.height);
 	
-	
+	//
 	current_context = ctx_light;
-	//draw_line(0, 0, lightCanvas.width, lightCanvas.height);
+	draw_line(0, 0, lightCanvas.width, lightCanvas.height);
 	
 	//
 	//current_canvas = lifeCanvas;
