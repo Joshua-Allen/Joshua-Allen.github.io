@@ -4,7 +4,7 @@ var ctx = canvas.getContext("2d");
 setInterval(render, 1000/60);
 
 var life = [];
-var cellSize = 10;
+var cellSize = 3;
 var numCells_x = (myCanvas.width / cellSize);
 var numCells_y = (myCanvas.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
