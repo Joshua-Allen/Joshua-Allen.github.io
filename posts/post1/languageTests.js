@@ -61,13 +61,13 @@ function lifeUpdate()
 	numCells_y = (lifeCanvas.height / cellSize);
 	numberOfCells = numCells_x * numCells_y;
 	
-	console.log("numCells_x - " + numCells_x);
-	
 	var newlife = [];
 	for (x = 0; x < numCells_x; x++) 
 	{
 		for (y = 0; y < numCells_y; y++) 
 		{
+			console.log("numCells_x - ");
+			
 			var c = lifeGetCell(x,y);
 			
 			var c1 = lifeGetCell(x-1,y-1);
