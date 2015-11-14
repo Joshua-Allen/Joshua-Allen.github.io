@@ -10,7 +10,7 @@ var ctx_light = lightCanvas.getContext("2d");
 var current_canvas = lifeCanvas;
 var current_context = ctx_life;
 
-setInterval(render, 1000/60);
+
 
 
 
@@ -22,6 +22,8 @@ var numCells_y = (ctx_life.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 
 lifeStart();
+setInterval(render, 1000/60);
+
 
 function lifeStart()
 {
@@ -90,6 +92,25 @@ function lifeUpdate()
 }
 
 
+function render_life()
+{
+	var x = 0;
+	var y = 0;
+	for (i = 0; i < numberOfCells; i++) 
+	{
+		if (life[i])
+		{
+			draw_rect(x*cellSize,y*cellSize,cellSize,cellSize);
+		}
+		x++;
+		if (x > numCells_x)
+		{
+			x = 0;
+			y++;
+		}
+	}
+}
+
 
 //
 function render()
@@ -118,25 +139,6 @@ function render()
 	
 	//lifeUpdate();
 	//render_life();
-}
-
-function render_life()
-{
-	var x = 0;
-	var y = 0;
-	for (i = 0; i < numberOfCells; i++) 
-	{
-		if (life[i])
-		{
-			draw_rect(x*cellSize,y*cellSize,cellSize,cellSize);
-		}
-		x++;
-		if (x > numCells_x)
-		{
-			x = 0;
-			y++;
-		}
-	}
 }
 
 
