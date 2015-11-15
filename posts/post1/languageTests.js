@@ -17,19 +17,6 @@ var numCells_x = (lifeCanvas.width / cellSize);
 var numCells_y = (lifeCanvas.height / cellSize);
 var numberOfCells = numCells_x * numCells_y;
 
-/*
-console.log("lifeCanvas = " + lifeCanvas);
-console.log("ctx_life = " + ctx_life);
-
-console.log("ctx_life.width = " + ctx_life.width);
-console.log("ctx_life.height = " + ctx_life.height);
-
-console.log("cellSize = " + cellSize);
-console.log("numCells_x = " + numCells_x);
-console.log("numCells_y = " + numCells_y);
-console.log("numberOfCells = " + numberOfCells);
-*/
-
 setInterval(render, 1000/30);
 
 lifeStart();
