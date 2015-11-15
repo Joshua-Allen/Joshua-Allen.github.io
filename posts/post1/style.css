@@ -11,3 +11,63 @@
 #sP {
 	line-height: 2;
 }
+
+#sPrjNav{
+	display: -webkit-flex;
+	display: flex;    
+	
+	height:20px;
+	
+	padding:0px;
+    border: 1px solid #C6C6C6; 
+}
+#sPrjNavItem{
+	
+	-webkit-flex: 1;
+			flex: 1;
+			
+	text-align: center;
+	list-style-type: none;
+	text-transform: uppercase;
+	
+    background: linear-gradient(#C6C6C6, #FDFDFD);
+}
+
+#sPrjNavItem:hover{
+	cursor:pointer;
+	line-height: 130%;
+	background: linear-gradient(#FDFDFD, #C6C6C6);
+}
+/*
+#sPrjNav {
+	display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#sPrjNavItem {
+    float: left;
+	
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+	
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#sPrjNavItem:hover{
+    background-color: #7A991A;
+	cursor:pointer;
+}*/

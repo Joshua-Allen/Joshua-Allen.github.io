@@ -1,5 +1,6 @@
 <div id = "sMain">
-<script type="text/javascript" src="posts/post1/languageTests.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="languageTests.js"></script>
 
 <h1 id = "sTitle">
 Learning a new language
@@ -28,16 +29,24 @@ Are you learning a new language? If so what projects should you do? I have no id
 For this blog I had to learn how to use JavaScript, so following my own advice I did a few projects. I really had no idea how JavaScript even worked but I did know that it is really easy to do graphics but that was about it.
 </p>
 
+
 <p>
-<button type="button" onclick="resizeF('iframe_a');">Project 1</button>
+<ul id="sPrjNav">
+  <li id="sPrjNavItem" onclick="document.getElementById('frame').src = 'http://rawgit.com/Joshua-Allen/js_GameOfLife/master/index.html'">Project 1</li>
+  <li id="sPrjNavItem" onclick="document.getElementById('frame').src = 'http://rawgit.com/Joshua-Allen/js_GameOfLife/master/index.html'">Project 2</li>
+  <li id="sPrjNavItem" onclick="document.getElementById('frame').src = 'http://rawgit.com/Joshua-Allen/js_GameOfLife/master/index.html'">Project 3</li>
+  <li id="sPrjNavItem" onclick="document.getElementById('frame').src = 'http://rawgit.com/Joshua-Allen/js_GameOfLife/master/index.html'">Project 4</li>
+</ul>
+<!-- 	
+<button type="button" onclick="document.getElementById('frame').src = 'http://rawgit.com/Joshua-Allen/js_GameOfLife/master/index.html'">Project 1</button>
 <button type="button" onclick="alert('Project 2')">Project 2</button>
 <button type="button" onclick="alert('Project 3')">Project 3</button>
+ -->
 </p>
 
-<iframe src="http://rawgit.com/Joshua-Allen/js_GameOfLife/master/index.html"
-		style="border-style: ridge; width:100%;"
-		onload="this.style.height=this.contentDocument.body.scrollHeight;"
-		id="iframe_a">No iframe for you.</iframe>
+<iframe src=""
+		style="border-style: ridge; width:100%; height:646px; overflow: hidden;"
+		id="frame">No iframe for you.</iframe>
 
 		
 		
