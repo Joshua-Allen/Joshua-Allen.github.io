@@ -1,48 +1,107 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-<meta charset="UTF-8">
-<link rel="shortcut icon" href="/img/favicon.ico" />
-<link rel="stylesheet" type="text/css" href="css/test.css">
-<link id="mainSectionStyle" rel="stylesheet" type="text/css" href="css/test.css">
-<title>Josh's tech blog</title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<script type="text/javascript" src="js/test.js"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-teal.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="stdtheme.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
 </head>
 
 <body>
-<div class="center">
-
-<!-- header -->
-<header>
-<a href="http://joshua-allen.github.io/">
-<img src="img/title.png" alt="Joshua Allen's work blog">
-</a>
-</header>
-
-<!-- -->
-<ul id="navbar">
-  <li id="navbar_item" onclick="document.location.href = 'http://joshua-allen.github.io/';">Home</li>
-  <li id="navbar_item" onclick="document.location.href = 'http://joshua-allen.github.io/';">Posts</li>
-  <li id="navbar_item" onclick="document.location.href = 'http://joshua-allen.github.io/';">Contact</li>
-  <li id="navbar_item" onclick="document.location.href = 'http://joshua-allen.github.io/';">About</li>
-</ul>
-
-<!-- navigation -->
-<nav>
-<p id="postList"></p>
-</nav>
-
-<!-- main section -->
-<section id="mainSection">
-</section>
-
-<!-- footer -->
-<footer>
-Copyright © Joshua Allen
-</footer>
-
-</div>
+	<!-- header -->
+	<div class="w3-container top" id="header" style="padding:20px; max-width:1000px; margin:auto">
+		<a class="w3-left href="#">
+			<img src="header.png" alt="Joshua Allen" class="w3-fluid">
+		</a>
+		<div class="w3-right toptext w3-wide" style="padding-top:20px;">
+			A place for all my ideas
+		</div>
+	</div>	
+	
+	<!-- navigation bar -->
+	<div class="w3-topnav topnav" id="topnav" style="position: relative; padding:0px;">
+		<div style="overflow:auto;">
+			<div style='float:left; width:100%; overflow:hidden;height:44px'>
+				<div style="max-width:1000px; margin:auto">
+					<a href="#" class="topnav-icons fa fa-home w3-left"></a>
+					<a href="#Blog" class='w3-hide-small' >Blog</a>
+					<a href="#Tutorials" class='w3-hide-small' >Tutorials</a>
+					<a href="#RandomWork" class='w3-hide-small' >Random Work</a>
+					<a href="#AboutMe" class='w3-hide-small' >About me</a>
+				</div>
+			</div>	
+		</div>	
+	</div>
+	
+	<!-- main body -->
+	<div class="w3-container top" id="belowtopnav" style="padding-top:0px;">
+		
+		<div class="w3-content w3-border-bottom">
+			<h1 class="w3-center">Welcome!</h1> 
+			<p>
+			My website will be my own little spot where I write about everything that I’m working on. Each one of the posts will most likely seem completely random, badly worded, and short but I can guarantee you that each one will be very interesting to me.
+			</p>
+			<p>
+			My main field of interest is real-time user interactive simulations (video games) and because of that I find myself studying almost everything that has to do with a computer and some things that don’t.
+			</p> 
+			<br><br><br>
+		</div>
+		
+		<div class="w3-content w3-border-bottom">
+			<div class="w3-row">
+				<div class="w3-col w3-container m8 l9">
+					<p>
+					This blog will be my own little spot where I write about everything that I’m working on. Each one of the posts will most likely seem completely random, badly worded, and short but I can guarantee you that each one will be very interesting to me.
+					</p>
+				</div>
+				<div class="w3-col w3-container m4 l3">
+						<p><canvas class="w3-border" id="blogCanvas" width="150" height="150" style="width:100%"></canvas></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="w3-content w3-border-bottom">
+			<div class="w3-row">
+				<div class="w3-col w3-container m4 l3">
+					<p><canvas class="w3-border" id="tutorialsCanvas" width="150" height="150" style="width:100%"></canvas></p>
+				</div>
+				<div class="w3-col w3-container m8 l9">
+					<p>
+					I love to teach, not only becuase it helps others learn but it also helps me understand the subject better. The tutorials Is where I will put things that I want other people to know.
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="w3-content w3-border-bottom">
+			<div class="w3-row">
+				<div class="w3-col w3-container m8 l9">
+					<p>
+					I do a lot of little projects that are not big enufe to do a blog post about and not interesting enufe to do a tutorial on. Random Work will have all thes projects. 
+					</p>
+				</div>
+				<div class="w3-col w3-container m4 l3">
+					<p><canvas class="w3-border" id="randomWorkCanvas" width="150" height="150" style="width:100%"></canvas></p>
+				</div>
+			</div>
+		</div>
+		
+		<br><br><br>
+		
+		<!-- footer -->
+		<footer class="w3-container w3-center footer" >
+			Stuff will go here
+		</footer>
+		
+	</div>
 </body>
+
 </html>
