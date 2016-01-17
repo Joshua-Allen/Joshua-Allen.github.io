@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 //
 function navClick(page) {
-	window.location.href = window.location.pathname + "/#" + page;
+	window.location.href = window.location.pathname + "?page=" + page;
 }
 
 // stuff to show the page
