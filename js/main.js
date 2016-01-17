@@ -3,8 +3,8 @@ $(document).ready(function() {
 });
 
 //
-function navClick() {
-	window.location.href = window.location.pathname;
+function navClick(page) {
+	window.location.href = window.location.pathname + "/#" + page;
 }
 
 // stuff to show the page
