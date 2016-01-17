@@ -1,5 +1,26 @@
+$(document).ready(function() {
+	set_page();
+});
 
+// stuff to show the page
+function set_page() {
+	console.log(getPage());
+}
 
+function getPage()
+{
+       var query = window.location.href;
+       var vars = query.split("#");
+       /*for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("#");
+               if(pair[0] == variable){return pair[1];}
+       }*/
+	   
+       return vars[1];
+}
+
+// stuff to fix the page
+//////////////////////////////////////////////////////////////////////////
 if (window.addEventListener) {
     window.addEventListener("scroll", function() {fix_sidemenu();});
     window.addEventListener("resize", function() {fix_sidemenu();});
