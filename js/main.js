@@ -1,3 +1,5 @@
+//console.log(c);
+
 $(document).ready(function() {
 	set_page();
 });
@@ -5,6 +7,7 @@ $(document).ready(function() {
 //
 function navClick(page) {
 	window.location.href = window.location.pathname + "?page=" + page;
+	console.log(page);
 }
 
 // stuff to show the page
@@ -14,7 +17,7 @@ function set_page() {
 	var pageVar = getQueryVariable("page");
 	
 	// get the real page location
-	var page = "/"+pageVar+"/index.html";
+	var page = pageVar+"/index.html";
 	
 	//
 	var xmlhttp;
