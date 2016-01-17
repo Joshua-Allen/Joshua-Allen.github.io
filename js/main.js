@@ -16,9 +16,12 @@ function set_page() {
 	
 	// get the page var from the url
 	var pageVar = getQueryVariable("page");
+	console.log("3 - "+pageVar);
 	
 	// get the real page location
 	var page = pageVar+"/index.html";
+	
+	console.log("4 - "+page);
 	
 	//
 	var xmlhttp;
