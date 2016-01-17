@@ -2,6 +2,11 @@ $(document).ready(function() {
 	set_page();
 });
 
+//
+function navClick() {
+	window.location.href = window.location.pathname;
+}
+
 // stuff to show the page
 function set_page() {
 	console.log(getPage());
