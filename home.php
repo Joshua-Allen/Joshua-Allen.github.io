@@ -1,1 +1,0 @@
-echo "My car is " . $color . "<br>";

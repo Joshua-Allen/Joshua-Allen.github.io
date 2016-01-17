@@ -7,8 +7,7 @@ function set_page() {
 	console.log(getPage());
 }
 
-function getPage()
-{
+function getPage() {
        var query = window.location.href;
        var vars = query.split("#");
        /*for (var i=0;i<vars.length;i++) {
@@ -16,7 +15,7 @@ function getPage()
                if(pair[0] == variable){return pair[1];}
        }*/
 	   
-       return vars[1];
+       return vars;
 }
 
 // stuff to fix the page
