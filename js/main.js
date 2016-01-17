@@ -6,8 +6,9 @@ $(document).ready(function() {
 
 //
 function navClick(page) {
+	console.log("1 - "+page);
 	window.location.href = window.location.pathname + "?page=" + page;
-	console.log(page);
+	console.log("2 - "+page);
 }
 
 // stuff to show the page
