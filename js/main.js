@@ -9,18 +9,37 @@ function navClick(page) {
 
 // stuff to show the page
 function set_page() {
-	console.log(getPage());
+	var page = getQueryVariable("page");
+	if (page == false){
+		var page = "home.html";
+	}
+	
+	var xmlhttp;
+	if (window.XMLHttpRequest) {
+		xmlhttp=new XMLHttpRequest();
+	} else {
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	xmlhttp.onreadystatechange = function() {
+		// wait to get the post
+		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+			$("#mainSection").html(xmlhttp.responseText);
+		}
+	}
+	
+	xmlhttp.open("GET", page, true);
+	xmlhttp.send();
 }
 
-function getPage() {
+function getQueryVariable(variable) {
        var query = window.location.href;
-       var vars = query.split("#");
-       /*for (var i=0;i<vars.length;i++) {
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
                var pair = vars[i].split("#");
                if(pair[0] == variable){return pair[1];}
-       }*/
-	   
-       return vars;
+       }
+	   return(false);
 }
 
 // stuff to fix the page
