@@ -9,11 +9,17 @@ function navClick(page) {
 
 // stuff to show the page
 function set_page() {
-	var page = getQueryVariable("page");
-	if (page == false){
-		var page = "home.html";
+	
+	// get the page var from the url
+	var pageVar = getQueryVariable("page");
+	if (pageVar == false){
+		var pageVar = "Home";
 	}
 	
+	// get the real page location
+	var page = "/"+pageVar+"/index.html";
+	
+	//
 	var xmlhttp;
 	if (window.XMLHttpRequest) {
 		xmlhttp=new XMLHttpRequest();
