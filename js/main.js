@@ -6,9 +6,7 @@ $(document).ready(function() {
 
 //
 function navClick(page) {
-	console.log("1 - "+page);
 	window.location.href = window.location.pathname + "?page=" + page;
-	console.log("2 - "+page);
 }
 
 // stuff to show the page
@@ -16,12 +14,9 @@ function set_page() {
 	
 	// get the page var from the url
 	var pageVar = getQueryVariable("page");
-	console.log("3 - "+pageVar);
 	
 	// get the real page location
 	var page = pageVar+"/index.html";
-	
-	console.log("4 - "+page);
 	
 	//
 	var xmlhttp;
@@ -43,7 +38,7 @@ function set_page() {
 }
 
 function getQueryVariable(variable) {
-       var query = window.location.href;
+       var query = window.location.search.substring(1);
        var vars = query.split("&");
        for (var i=0;i<vars.length;i++) {
                var pair = vars[i].split("#");
