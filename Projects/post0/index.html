@@ -91,10 +91,17 @@
 				<p>
 				Having access to the emulated game in its entirety is very important because we wanted any AI to be able to use it. A deep learning neural network might use all the internal ram while an A* pathfinder might just use the video ram. Because we created the emulator, we are able to see if a memory location has been updated. This allows for much faster I/O. For example a user needs the video RAM he can first ask if it has changed from the last time the user asked for it.
 				</p>
+				<div class="w3-image">
+					<img src="img/emu_gm.png" alt="emu">
+				</div>
+				
 				<h3>Network Input and Output</h3> 
 				<p>
 				Moving the AI environment away from the AI will require some sort of communication connection between them. We decided on using a simple UDP protocol where the emulator will constantly wait for a command. It will not stream, so each task will require a new command.
 				</p>
+				<div class="w3-image">
+					<img src="img/tiles.png" alt="emu">
+				</div>
 				<br>
 				<p>
 				The emulator was made to be able to add commands easily. This has allowed us to do allot of the work on the emulator side without having to transfer a lot of information. The first four commands are just that, it was tedious working with the screen and the buttons until those commands where added.
@@ -122,7 +129,9 @@
 				<p>
 				At First we made row clearing worth a lot of points but quickly found that it did not get very far into the game. This was because large holes formed resulting in a steady increase in height. To combat this, we made hole elimination and height control worth a lot more than if a move would cause a row to be cleared. That improvement had the effect of making the AI appear to be planning for the next move and on average, outperforming a human.
 				</p>
-				
+				<div class="w3-image">
+					<img src="img/emu_java.png" alt="emu">
+				</div>
 				
 				<h3>Network Input and Output</h3> 
 				<p>
@@ -140,6 +149,9 @@
 				<p>
 				What makes it so complex is that it starts with a very small and random neural network then uses genetic algorithms to advance over many generations and species.
 				</p>
+				<div class="w3-image">
+					<img src="img/neat.png" alt="emu">
+				</div>
 				
 				<h3>Conclusion</h3> 
 				<p>
