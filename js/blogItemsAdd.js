@@ -34,6 +34,7 @@ function blog_set_posts(numberOfPosts) {
 				
 				console.log(posts.length);
 				console.log(numberOfPosts);
+				console.log(posts);
 				
 				if (posts.length == numberOfPosts-1) {
 					var html = "";
