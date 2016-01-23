@@ -36,7 +36,7 @@ function blog_set_posts(numberOfPosts) {
 				console.log(numberOfPosts);
 				console.log(posts);
 				
-				if (posts.length == numberOfPosts-1) {
+				if ((posts.length-1) == numberOfPosts) {
 					var html = "";
 					for	(var index = 0; index < posts.length; index++) {
 						html += fruits[index];
