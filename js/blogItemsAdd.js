@@ -32,7 +32,7 @@ function blog_set_posts(numberOfPosts) {
 				//$("#mainSection").html(xmlhttp.responseText);
 				posts[i] = blog_createPostSection(xmlhttp.responseXML);
 				
-				if (posts.length == numberOfPosts) {
+				if (posts.length == numberOfPosts-1) {
 					var html = "";
 					for	(var index = 0; index < posts.length; index++) {
 						html += fruits[index];
