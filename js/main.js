@@ -17,7 +17,7 @@ function set_page() {
 	var postVar = getQueryVariable("post");
 	
 	// get the real page location
-	if (postVar != -1){
+	if (postVar != "-1"){
 		var page = pageVar+"/index.html";
 	} else {
 		var page = pageVar+"/posts/post"+postVar+"index.html";
