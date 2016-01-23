@@ -5,12 +5,12 @@ $(document).ready(function() {
 });
 
 //
-function pageLoad(page) {
-	window.location.href = window.location.pathname + "?page=" + page;
-	document.getElementById("footer").style.visibility = "hidden";
-}
 function pageLoad(page, post) {
-	window.location.href = window.location.pathname + "?page=Blog"+ "&post=" + post;
+	if (post === undefined) {
+        window.location.href = window.location.pathname + "?page=" + page;
+    } else {
+		window.location.href = window.location.pathname + "?page=Blog"+ "&post=" + post;
+	}
 	document.getElementById("footer").style.visibility = "hidden";
 }
 
