@@ -73,7 +73,7 @@ function blog_createPostSection(xml, post) {
 	//postHtml += '<div class="w3-col w3-container m4 l3">';
 	//postHtml += '<p>';
 	//postHtml += '<div class="w3-image">';
-	postHtml += '<div class="w3-third">';
+	postHtml += '<div class="w3-col m2">';
 	postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width:100%; min-height:150px">';
 	postHtml += '</div>';
 	//postHtml += '</div>'
@@ -81,7 +81,7 @@ function blog_createPostSection(xml, post) {
 	//postHtml += '</div>';
 	
 	//postHtml += '<div class="w3-col w3-container m8 l9">';
-	postHtml += '<div class="w3-twothird w3-container">';
+	postHtml += '<div class="w3-col m10 w3-container">';
 	postHtml += '<p class="w3-right w3-small">'+blog_date+'</p>';
 	postHtml += '<h2>'+blog_title+'</h2>';
 	postHtml += '<p>'+blog_body+'</p>';
