@@ -43,9 +43,7 @@ function blog_set_posts(numberOfPosts) {
 function blog_createPostSection(xml) {
 	var postHtml = "";
 	
-	postHtml = 
-	"
-	"
+	postHtml = "";
 	console.log(postHtml);
 	return postHtml;
 }
