@@ -74,7 +74,7 @@ function blog_createPostSection(xml, post) {
 	//postHtml += '<p>';
 	//postHtml += '<div class="w3-image">';
 	postHtml += '<div class="w3-col m2">';
-	postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width:100%; min-height:150px">';
+	postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width:100%;">';
 	postHtml += '</div>';
 	//postHtml += '</div>'
 	//postHtml += '</p>';
