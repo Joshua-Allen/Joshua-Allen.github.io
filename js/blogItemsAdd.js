@@ -30,7 +30,17 @@ function blog_set_posts(numberOfPosts) {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 				//$("#mainSection").html(xmlhttp.responseText);
-				posts[i+1] = blog_createPostSection(xmlhttp.responseXML);
+				posts[i] = blog_createPostSection(xmlhttp.responseXML);
+				
+				if (posts.length == numberOfPosts) {
+					var html = "";
+					for	(var index = 0; index < posts.length; index++) {
+						html += fruits[index];
+					}
+					$("#blogPostsSection").html(html);
+					console.log(posts);
+					console.log(html);				
+				}
 			}
 		}
 		
@@ -38,15 +48,10 @@ function blog_set_posts(numberOfPosts) {
 		xmlhttp.send();
 	}
 	
-	var html = "";
-	for	(index = 0; index < posts.length; index++) {
-		html += fruits[index];
-	}
-	$("#blogPostsSection").html(html);
-	console.log(posts);
-	console.log(html);
-	
+
 }
+
+
 
 // add the post to the site
 function blog_createPostSection(xml) {
