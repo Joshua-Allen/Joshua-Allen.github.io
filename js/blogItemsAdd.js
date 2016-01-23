@@ -78,7 +78,6 @@ function blog_createPostSection(xml, post) {
 			postHtml += '<div class="w3-rest w3-container">';
 			postHtml += '<p class="w3-small w3-right" style="margin: 0px;">'+blog_date+'</p>';
 			postHtml += '<h2 style="margin: 0px;">';
-				blog_title+'
 				postHtml += '<a href="" onclick="blog_set_posts('+post+');">'+blog_title+'</a>';
 			postHtml += '</h2>';
 			postHtml += '<p>'+blog_body+'</p>';
