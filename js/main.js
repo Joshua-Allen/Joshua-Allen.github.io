@@ -9,7 +9,7 @@ function pageLoad(page, post) {
 	if (post === undefined) {
         window.location.href = window.location.pathname + "?page=" + page;
     } else {
-		window.location.href = window.location.pathname + "?page=Blog"+ "&post=" + post;
+		window.location.href = window.location.pathname + "?page=" + page + "&post=" + post;
 	}
 	document.getElementById("footer").style.visibility = "hidden";
 }
