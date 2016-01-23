@@ -60,12 +60,13 @@ function blog_createPostSection(xml) {
 	postHtml += '<div class="w3-row">';
 	
 	postHtml += '<div class="w3-col w3-container m4 l3">';
-	postHtml += '<p><canvas class="w3-border" id="tutorialsCanvas" width="150" height="150" style="width:100%"></canvas></p>';
+	postHtml += '<p><canvas class="w3-border" id="tutorialsCanvas" width="100" height="100" style="width:100%"></canvas></p>';
 	postHtml += '</div>';
 	
 	postHtml += '<div class="w3-col w3-container m8 l9">';
 	
-	postHtml += '<p>text</p>';
+	postHtml += '<p>'+xml.getElementsByTagName("title")[0].childNodes[0].nodeValue'</p>';
+	postHtml += '<p>'+xml.getElementsByTagName("body")[0].childNodes[0].nodeValue'</p>';
 	
 	postHtml += '</div></div></div>';
 	
