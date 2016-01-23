@@ -30,7 +30,7 @@ function blog_set_posts(numberOfPosts) {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 				//$("#mainSection").html(xmlhttp.responseText);
-				posts[i] = blog_createPostSection(xmlhttp.responseXML);
+				posts[i+1] = blog_createPostSection(xmlhttp.responseXML);
 			}
 		}
 		
@@ -38,7 +38,7 @@ function blog_set_posts(numberOfPosts) {
 		xmlhttp.send();
 	}
 	
-	var html;
+	var html = "";
 	for	(index = 0; index < posts.length; index++) {
 		html += fruits[index];
 	}
