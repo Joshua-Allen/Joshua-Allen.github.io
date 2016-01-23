@@ -74,15 +74,15 @@ function blog_createPostSection(xml, post) {
 	//postHtml += '<div class="w3-image">';
 	postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width: 100px; height: 100px;">';
 	//postHtml += '</div>'
-	//postHtml += '</p>';
-	postHtml += '</div>';
+	postHtml += '</p>';
+	//postHtml += '</div>';
 	
 	//postHtml += '<div class="w3-col w3-container m8 l9">';
 	postHtml += '<p>'+blog_title+'</p>';
 	postHtml += '<p>'+blog_body+'</p>';
+	//postHtml += '</div>';
+	//postHtml += '</div>';
 	postHtml += '</div>';
-	
-	postHtml += '</div></div>';
 	
 	return postHtml;
 }
