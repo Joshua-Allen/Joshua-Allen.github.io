@@ -14,7 +14,7 @@ function set_posts() {
 	var pageVar = "post0";
 	
 	// get the real page location
-	var xml = pageVar+"/info.xml";
+	var xml = "Blog/posts/"+pageVar+"/info.xml";
 	
 	//
 	var xmlhttp;
