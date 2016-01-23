@@ -71,11 +71,11 @@ function blog_createPostSection(xml, post) {
 	
 		postHtml += '<div class="w3-row w3-margin">';
 		
-			postHtml += '<div class="w3-col s2">';
-			postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width:100%;">';
+			postHtml += '<div class="w3-col" style="width:150px;">';
+			postHtml += '<img src="' + blog_image + '" alt="Blog image" style="width:100%;">';
 			postHtml += '</div>';
 			
-			postHtml += '<div class="w3-col s10 w3-container">';
+			postHtml += '<div class="w3-rest w3-container">';
 			postHtml += '<p class="w3-small w3-right" style="margin: 0px;">'+blog_date+'</p>';
 			postHtml += '<h2 style="margin: 0px;">'+blog_title+'</h2>';
 			postHtml += '<p>'+blog_body+'</p>';
