@@ -14,9 +14,14 @@ function set_page() {
 	
 	// get the page var from the url
 	var pageVar = getQueryVariable("page");
+	var postVar = getQueryVariable("post");
 	
 	// get the real page location
-	var page = pageVar+"/index.html";
+	if (postVar != -1){
+		var page = pageVar+"/index.html";
+	} else {
+		var page = pageVar+"/posts/post"+postVar+"index.html";
+	}
 	
 	//
 	var xmlhttp;
@@ -44,7 +49,8 @@ function getQueryVariable(variable) {
                var pair = vars[i].split("=");
                if(pair[0] == variable){return pair[1];}
        }
-	   return "Home";
+	   if (variable == "page") return "Home";
+	   if (variable == "post") return "-1";
 }
 
 // stuff to fix the page
