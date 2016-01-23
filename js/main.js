@@ -37,7 +37,7 @@ function set_page() {
 			$("#mainSection").html(xmlhttp.responseText);
 			
 			// make footer visable
-			document.getElementById("footer").style.display = "inline";
+			document.getElementById("footer").style.visibility = "visible";
 		}
 	}
 	
