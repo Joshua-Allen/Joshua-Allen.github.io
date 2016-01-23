@@ -32,6 +32,9 @@ function blog_set_posts(numberOfPosts) {
 				//$("#mainSection").html(xmlhttp.responseText);
 				posts[i] = blog_createPostSection(xmlhttp.responseXML);
 				
+				console.log(posts.length);
+				console.log(numberOfPosts);
+				
 				if (posts.length == numberOfPosts-1) {
 					var html = "";
 					for	(var index = 0; index < posts.length; index++) {
