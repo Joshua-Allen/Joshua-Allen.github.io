@@ -68,25 +68,25 @@ function blog_createPostSection(xml, post) {
 	
 	postHtml += '<div class="w3-content w3-border-bottom">';
 	//postHtml += '<div class="w3-row">';
-	postHtml += '<table><tr>';
+	postHtml += '<div class="w3-row w3-margin">';
 	//postHtml += '<div class="w3-col w3-container m4 l3">';
 	//postHtml += '<p>';
 	//postHtml += '<div class="w3-image">';
-	postHtml += '<th>';
+	postHtml += '<div class="w3-third">';
 	postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width: 100px; height: 100px;">';
-	postHtml += '</th>';
+	postHtml += '</div>';
 	//postHtml += '</div>'
 	//postHtml += '</p>';
 	//postHtml += '</div>';
 	
 	//postHtml += '<div class="w3-col w3-container m8 l9">';
-	postHtml += '<th>';
-	postHtml += '<p>'+blog_title+'</p>';
+	postHtml += '<div class="w3-twothird w3-container">';
+	postHtml += '<h2>'+blog_title+'</h2>';
 	postHtml += '<p>'+blog_body+'</p>';
-	postHtml += '</th>';
+	postHtml += '</div>';
 	//postHtml += '</div>';
 	//postHtml += '</div>';
-	postHtml += '</tr></table>';
+	postHtml += '</div>';
 	postHtml += '</div>';
 	
 	return postHtml;
