@@ -29,16 +29,11 @@ function blog_set_posts(numberOfPosts) {
 		xmlhttp.onreadystatechange = function() {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-				//$("#mainSection").html(xmlhttp.responseText);
 				posts[i] = blog_createPostSection(xmlhttp.responseXML);
-				
-				console.log(posts.length);
-				console.log(numberOfPosts);
-				console.log(posts);
 				
 				if ((posts.length-1) == numberOfPosts) {
 					var html = "";
-					for	(var index = 0; index < posts.length; index++) {
+					for	(var index = 0; index < posts.length-1; index++) {
 						html += posts[index];
 					}
 					$("#blogPostsSection").html(html);
