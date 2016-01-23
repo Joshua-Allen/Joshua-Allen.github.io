@@ -43,6 +43,8 @@ function blog_set_posts(numberOfPosts) {
 		html += fruits[index];
 	}
 	$("#blogPostsSection").html(html);
+	console.log(posts);
+	console.log(html);
 	
 }
 
@@ -63,8 +65,6 @@ function blog_createPostSection(xml) {
 	
 	postHtml += '</div></div></div>';
 	
-	
-	console.log(postHtml);
 	return postHtml;
 }
 
