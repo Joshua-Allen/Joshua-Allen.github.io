@@ -30,7 +30,7 @@ function blog_set_posts(numberOfPosts) {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 				//$("#mainSection").html(xmlhttp.responseText);
-				posts[i] = createPostSection(xmlhttp.responseXML);
+				posts[i] = blog_createPostSection(xmlhttp.responseXML);
 			}
 		}
 		
