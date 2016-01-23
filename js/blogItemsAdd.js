@@ -45,18 +45,6 @@ function createPostSection(xml) {
 	
 	postHtml = 
 	"
-	<div class='w3-content w3-border-bottom'>
-		<div class='w3-row'>
-			<div class='w3-col w3-container m4 l3'>
-				<p><canvas class='w3-border' id='tutorialsCanvas' width='150' height='150' style='width:100%'></canvas></p>
-			</div>
-			<div class='w3-col w3-container m8 l9'>
-				<p>
-				I love to teach, not only becuase it helps others learn but it also helps me understand the subject better. The tutorials Is where I will put things that I want other people to know.
-				</p>
-			</div>
-		</div>
-	</div>
 	"
 	console.log(postHtml);
 	return postHtml;
