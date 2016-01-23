@@ -56,6 +56,7 @@ function blog_createPostSection(xml, post) {
 	var blog_image = "Blog/defaultMainImage.png";
 	var blog_title = xml.getElementsByTagName("title")[0].childNodes[0].nodeValue;
 	var blog_body = xml.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+	var blog_date = xml.getElementsByTagName("date")[0].childNodes[0].nodeValue;
 	
 	
 	var img = xml.getElementsByTagName("img")[0].childNodes[0].nodeValue;
@@ -73,7 +74,7 @@ function blog_createPostSection(xml, post) {
 	//postHtml += '<p>';
 	//postHtml += '<div class="w3-image">';
 	postHtml += '<div class="w3-third">';
-	postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width:100%; min-height:200px">';
+	postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width:100%; min-height:150px">';
 	postHtml += '</div>';
 	//postHtml += '</div>'
 	//postHtml += '</p>';
@@ -81,6 +82,7 @@ function blog_createPostSection(xml, post) {
 	
 	//postHtml += '<div class="w3-col w3-container m8 l9">';
 	postHtml += '<div class="w3-twothird w3-container">';
+	postHtml += '<p class="w3-right w3-small">'+blog_date+'</p>';
 	postHtml += '<h2>'+blog_title+'</h2>';
 	postHtml += '<p>'+blog_body+'</p>';
 	postHtml += '</div>';
