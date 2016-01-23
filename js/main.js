@@ -35,6 +35,9 @@ function set_page() {
 		// wait to get the post
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 			$("#mainSection").html(xmlhttp.responseText);
+			
+			// make footer visable
+			document.getElementById("footer").style.display = "block";
 		}
 	}
 	
