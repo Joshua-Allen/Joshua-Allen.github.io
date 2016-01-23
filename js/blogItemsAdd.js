@@ -65,8 +65,8 @@ function blog_createPostSection(xml) {
 	
 	postHtml += '<div class="w3-col w3-container m8 l9">';
 	
-	postHtml += '<p>'+xml.getElementsByTagName("title")[0].childNodes[0].nodeValue'</p>';
-	postHtml += '<p>'+xml.getElementsByTagName("body")[0].childNodes[0].nodeValue'</p>';
+	postHtml += '<p>'+xml.getElementsByTagName("title")[0].childNodes[0].nodeValue+'</p>';
+	postHtml += '<p>'+xml.getElementsByTagName("body")[0].childNodes[0].nodeValue+'</p>';
 	
 	postHtml += '</div></div></div>';
 	
