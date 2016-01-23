@@ -5,12 +5,12 @@ $(document).ready(function() {
 });
 
 //
-function postClick(post) {
+function blog_postClick(post) {
 	window.location.href = window.location.pathname + "?page=" + post;
 }
 
 // load the posts xml
-function set_posts(numberOfPosts) {
+function blog_set_posts(numberOfPosts) {
 	var posts = [];
 	for(var i=0; i<numberOfPosts; i++){
 		var pageVar = "post"+i;
@@ -30,7 +30,7 @@ function set_posts(numberOfPosts) {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 				//$("#mainSection").html(xmlhttp.responseText);
-				posts[i] = createPostSection(xmlhttp.responseText)
+				posts[i] = createPostSection(xmlhttp.responseText);
 			}
 		}
 		
@@ -40,7 +40,7 @@ function set_posts(numberOfPosts) {
 }
 
 // add the post to the site
-function createPostSection(xml) {
+function blog_createPostSection(xml) {
 	var postHtml = "";
 	
 	postHtml = 
