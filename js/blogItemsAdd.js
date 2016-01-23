@@ -29,7 +29,7 @@ function blog_set_posts(numberOfPosts) {
 		xmlhttp.onreadystatechange = function() {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-				posts[i] = blog_createPostSection(xmlhttp.responseXML, i);
+				posts[i] = blog_createPostSection(xmlhttp.responseXML, i-1);
 				
 				if ((posts.length-1) == numberOfPosts) {
 					var html = "";
@@ -61,7 +61,7 @@ function blog_createPostSection(xml, post) {
 	
 	var img = xml.getElementsByTagName("img")[0].childNodes[0].nodeValue;
 	if (img != 0){
-		blog_image = "Blog/post"+post+"/"+img;
+		blog_image = "Blog/posts/post"+post+"/"+img;
 	}
 	
 	
