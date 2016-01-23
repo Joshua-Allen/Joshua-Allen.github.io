@@ -36,9 +36,7 @@ function blog_set_posts(numberOfPosts) {
 					for	(var index = 1; index < posts.length; index++) {
 						html += posts[index];
 					}
-					$("#blogPostsSection").html(html);
-					console.log(posts);
-					console.log(html);				
+					$("#blogPostsSection").html(html);		
 				}
 			}
 		}
