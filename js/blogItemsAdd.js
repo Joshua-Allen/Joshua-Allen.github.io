@@ -67,12 +67,12 @@ function blog_createPostSection(xml, post) {
 	
 	var postHtml = "";
 	
-	postHtml += '<div class="w3-content w3-border-bottom" style="min-width: 570px;">';
+	postHtml += '<div class="w3-content w3-border-bottom" style="min-width: 600px;">';
 	
 		postHtml += '<div class="w3-row w3-margin">';
 		
 			postHtml += '<div class="w3-col m2">';
-			postHtml += '<img src="' + blog_image + '" alt="Blog image" style="float:left; width:100%;">';
+			postHtml += '<img src="' + blog_image + '" alt="Blog image" style="position: absolute; float:left; width:100%;">';
 			postHtml += '</div>';
 			
 			postHtml += '<div class="w3-col m10 w3-container">';
