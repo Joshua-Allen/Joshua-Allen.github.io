@@ -72,9 +72,9 @@ function blog_createPostSection(xml, post) {
 	postHtml += '<div class="w3-row">';
 	
 	postHtml += '<div class="w3-col w3-container m4 l3">';
-	postHtml += '<p><div class="w3-image"><img src="' + blog_image + '" alt="Blog image" style="width: 100px; height: 100px;"></div></p>';
-	
-	postHtml += '" alt="Blog image" style="width: 100px; height: 100px;"></div></p>';
+	postHtml += '<p><div class="w3-image">'
+	postHtml += '<img src="' + blog_image + '" alt="Blog image" style="width: 100px; height: 100px;">';
+	postHtml += '</div></p>';
 	postHtml += '</div>';
 	
 	postHtml += '<div class="w3-col w3-container m8 l9">';
