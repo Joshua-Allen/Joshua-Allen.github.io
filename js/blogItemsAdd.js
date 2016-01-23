@@ -32,7 +32,7 @@ function set_posts() {
 		}
 	}
 	
-	xmlhttp.open("GET", xml, true);
+	xmlhttp.open("GET", xml, false);
 	xmlhttp.send();
 }
 
