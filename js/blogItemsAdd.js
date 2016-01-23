@@ -1,7 +1,7 @@
 //console.log(c);
 
 $(document).ready(function() {
-	set_posts(1);
+	blog_set_posts(1);
 });
 
 //
