@@ -5,9 +5,15 @@ $(document).ready(function() {
 });
 
 //
-function navClick(page) {
+function pageLoad(page) {
 	window.location.href = window.location.pathname + "?page=" + page;
+	document.getElementById("footer").style.visibility = "hidden";
 }
+function pageLoad(page, post) {
+	window.location.href = window.location.pathname + "?page=Blog"+ "&post=" + post;
+	document.getElementById("footer").style.visibility = "hidden";
+}
+
 
 // stuff to show the page
 function set_page() {
