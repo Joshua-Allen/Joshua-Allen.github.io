@@ -29,7 +29,7 @@ function blog_set_posts(numberOfPosts) {
 		xmlhttp.onreadystatechange = function() {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-				posts[i] = blog_createPostSection(xmlhttp.responseXML);
+				posts[i] = blog_createPostSection(xmlhttp.responseXML, i);
 				
 				if ((posts.length-1) == numberOfPosts) {
 					var html = "";
@@ -53,20 +53,34 @@ function blog_set_posts(numberOfPosts) {
 
 
 // add the post to the site
-function blog_createPostSection(xml) {
+function blog_createPostSection(xml, post) {
+	
+	var blog_image = "Blog/defaultMainImage.png";
+	var blog_title = xml.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+	var blog_body = xml.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+	
+	
+	var img = xml.getElementsByTagName("img")[0].childNodes[0].nodeValue;
+	if (img != 0){
+		blog_image = "Blog/post"+post+"/"+img;
+	}
+	
+	
 	var postHtml = "";
 	
 	postHtml += '<div class="w3-content w3-border-bottom">';
 	postHtml += '<div class="w3-row">';
 	
 	postHtml += '<div class="w3-col w3-container m4 l3">';
-	postHtml += '<p><canvas class="w3-border" id="tutorialsCanvas" width="100" height="100" style="width:100%"></canvas></p>';
+	postHtml += '<p><div class="w3-image"><img src="' + blog_image + '" alt="Blog image" style="width: 100px; height: 100px;"></div></p>';
+	
+	postHtml += '" alt="Blog image" style="width: 100px; height: 100px;"></div></p>';
 	postHtml += '</div>';
 	
 	postHtml += '<div class="w3-col w3-container m8 l9">';
 	
-	postHtml += '<p>'+xml.getElementsByTagName("title")[0].childNodes[0].nodeValue+'</p>';
-	postHtml += '<p>'+xml.getElementsByTagName("body")[0].childNodes[0].nodeValue+'</p>';
+	postHtml += '<p>'+blog_title+'</p>';
+	postHtml += '<p>'+blog_body+'</p>';
 	
 	postHtml += '</div></div></div>';
 	
