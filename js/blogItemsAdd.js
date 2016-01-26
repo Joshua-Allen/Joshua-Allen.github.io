@@ -12,6 +12,7 @@ function blog_set_posts(numberOfPosts) {
 		
 		// get the real page location
 		var xml = "Blog/posts/"+pageVar+"/info.xml";
+		console.log(xml);
 		
 		//
 		var xmlhttp;
@@ -45,7 +46,7 @@ function blog_set_posts(numberOfPosts) {
 
 // add the post to the site
 function blog_createPostSection(xml, post) {
-	console.log(xml);
+	
 	var blog_image = "Blog/defaultMainImage.png";
 	var blog_title = xml.getElementsByTagName("title")[0].childNodes[0].nodeValue;
 	var blog_body = xml.getElementsByTagName("body")[0].childNodes[0].nodeValue;
