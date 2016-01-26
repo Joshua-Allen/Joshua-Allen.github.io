@@ -24,9 +24,9 @@ function blog_set_posts(numberOfPosts) {
 		xmlhttp.onreadystatechange = function() {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-				console.log(xml);
-				posts[i] = blog_createPostSection(xmlhttp.responseXML, i-1);
 				
+				posts[i] = blog_createPostSection(xmlhttp.responseXML, i-1);
+				console.log(i);
 				if ((posts.length-1) == numberOfPosts) {
 					var html = "";
 					for	(var index = 1; index < posts.length; index++) {
