@@ -9,7 +9,7 @@ function blog_set_posts(numberOfPosts) {
 	var posts = [];
 	for(var i=0; i<numberOfPosts; i++){
 		var pageVar = "post"+i;
-		
+		console.log(pageVar);
 		// get the real page location
 		var xml = "Blog/posts/"+pageVar+"/info.xml";
 		
