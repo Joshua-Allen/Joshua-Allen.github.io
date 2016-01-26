@@ -12,7 +12,6 @@ function blog_set_posts(numberOfPosts) {
 		
 		// get the real page location
 		var xml = "Blog/posts/"+pageVar+"/info.xml";
-		console.log(xml);
 		
 		//
 		var xmlhttp;
@@ -25,6 +24,7 @@ function blog_set_posts(numberOfPosts) {
 		xmlhttp.onreadystatechange = function() {
 			// wait to get the post
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				console.log(xml);
 				posts[i] = blog_createPostSection(xmlhttp.responseXML, i-1);
 				
 				if ((posts.length-1) == numberOfPosts) {
