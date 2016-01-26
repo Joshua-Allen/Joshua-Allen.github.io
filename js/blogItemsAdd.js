@@ -37,7 +37,7 @@ function blog_set_posts(numberOfPosts) {
 			}
 		}
 		
-		xmlhttp.open("GET", xml, false);
+		xmlhttp.open("GET", xml, true);
 		xmlhttp.send();
 	}
 }
