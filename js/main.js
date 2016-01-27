@@ -1,5 +1,9 @@
 //console.log(c);
 
+pageVar = "";
+postVar = "";
+
+
 $(document).ready(function() {
 	set_page();
 	code_fix.fix();
@@ -20,8 +24,8 @@ function pageLoad(page, post) {
 function set_page() {
 	
 	// get the page var from the url
-	var pageVar = getQueryVariable("page");
-	var postVar = getQueryVariable("post");
+	pageVar = getQueryVariable("page");
+	postVar = getQueryVariable("post");
 	
 	// get the real page location
 	if (postVar == "-1"){
@@ -43,8 +47,7 @@ function set_page() {
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 			$("#mainSection").html(xmlhttp.responseText);
 			
-			// make footer visable
-			document.getElementById("footer").style.visibility = "visible";
+			page_loading_compleat();
 		}
 	}
 	
@@ -61,6 +64,14 @@ function getQueryVariable(variable) {
        }
 	   if (variable == "page") return "Home";
 	   if (variable == "post") return "-1";
+}
+
+function page_loading_compleat(){
+	// make footer visable
+	document.getElementById("footer").style.visibility = "visible";
+	
+	
+	loadPosts(pageVar, 2);
 }
 
 // stuff to fix the page
