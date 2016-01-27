@@ -6,8 +6,6 @@ numberOfPosts = 0;
 folder = "";
 
 function loadPosts(folderu, number){
-	console.log(folder, number);
-	
 	numberOfPosts = number;
 	folder = folderu;
 	for(var i=0; i<numberOfPosts; i++){
@@ -21,9 +19,7 @@ function set_posts(post_number) {
 	var pageVar_post = "post"+post_number;
 	
 	// get the real page location
-	var xml = folder+"/posts/"+pageVar_post+"/info.xml";
-	
-	console.log(folder);
+	var xml = folder+"/posts/"+pageVar_post+"/info.xml";7
 	
 	//
 	var xmlhttp;
@@ -67,6 +63,7 @@ function createPostSection(xml, post) {
 	if (img != "0"){
 		post_image = folder+"/posts/post"+post+"/images/"+img;
 	}
+	console.log(img, post_image);
 	
 	
 	var postHtml = "";
