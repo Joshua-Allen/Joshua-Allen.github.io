@@ -16,10 +16,10 @@ function loadPosts(folder, number){
 // load the posts xml
 function set_posts(post_number) {
 	
-	var pageVar = "post"+post_number;
+	var pageVar_post = "post"+post_number;
 	
 	// get the real page location
-	var xml = folder+"/posts/"+pageVar+"/info.xml";
+	var xml = folder+"/posts/"+pageVar_post+"/info.xml";
 	
 	console.log(folder);
 	
