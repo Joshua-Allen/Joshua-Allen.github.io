@@ -6,7 +6,6 @@ postVar = "";
 
 $(document).ready(function() {
 	set_page();
-	code_fix.fix();
 });
 
 //
@@ -69,6 +68,7 @@ function getQueryVariable(variable) {
 function page_loading_compleat(){
 	// make footer visable
 	document.getElementById("footer").style.visibility = "visible";
+	code_fix.fix();
 	
 	if (pageVar != "Home" && pageVar != "AboutMe" && postVar == "-1"){
 		getNumberOfPosts();
