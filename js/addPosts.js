@@ -64,8 +64,8 @@ function createPostSection(xml, post) {
 	
 	
 	var img = xml.getElementsByTagName("img")[0].childNodes[0].nodeValue;
-	if (img != 0){
-		post_image = folder+"/posts/post"+post+"/"+img;
+	if (img != "0"){
+		post_image = folder+"/posts/post"+post+"/images/"+img;
 	}
 	
 	
