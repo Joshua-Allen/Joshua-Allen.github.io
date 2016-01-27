@@ -6,6 +6,8 @@ numberOfPosts = 0;
 folder = "";
 
 function loadPosts(folder, number){
+	console.log(folder, number);
+	
 	numberOfPosts = number;
 	folder = folder;
 	for(var i=0; i<numberOfPosts; i++){
