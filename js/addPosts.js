@@ -5,11 +5,11 @@ posts = [];
 numberOfPosts = 0;
 folder = "";
 
-function loadPosts(folder, number){
+function loadPosts(folderu, number){
 	console.log(folder, number);
 	
 	numberOfPosts = number;
-	folder = folder;
+	folder = folderu;
 	for(var i=0; i<numberOfPosts; i++){
 		set_posts(i);
 	}
