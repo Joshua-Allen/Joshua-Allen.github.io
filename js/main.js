@@ -71,12 +71,34 @@ function page_loading_compleat(){
 	document.getElementById("footer").style.visibility = "visible";
 	
 	if (pageVar != "Home" && postVar == "-1"){
-		loadPosts(pageVar, 2);
+		getNumberOfPosts();
+		//loadPosts(pageVar, 2);
 	}
 }
 
 function getNumberOfPosts(){
+	var xml = pageVar+"/info.xml";
+
+	//
+	var xmlhttp;
+	if (window.XMLHttpRequest) {
+		xmlhttp=new XMLHttpRequest();
+	} else {
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
 	
+	xmlhttp.onreadystatechange = function() {
+		// wait to get the post
+		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+			//$("#mainSection").html(xmlhttp.responseText);
+			xmlhttp.responseXML
+			var number = xmlhttp.responseXML.getElementsByTagName("postNumber")[0].childNodes[0].nodeValue;
+			loadPosts(pageVar, number);
+		}
+	}
+	
+	xmlhttp.open("GET", xml, true);
+	xmlhttp.send();
 }
 
 // stuff to fix the page
