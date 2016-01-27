@@ -82,7 +82,7 @@ function createPostSection(xml, post) {
 			postHtml += '<div class="w3-rest w3-container">';
 			postHtml += '<p class="w3-small w3-right" style="margin: 0px;">'+post_date+'</p>';
 			postHtml += '<h2 style="margin: 0px;">';
-				postHtml += '<a href="#" onclick="pageLoad('+folder+','+"'"+post+"'"+');">'+post_title+'</a>';
+				postHtml += '<a href="#" onclick="pageLoad('+"'"+folder+"'"+','+"'"+post+"'"+');">'+post_title+'</a>';
 			postHtml += '</h2>';
 			postHtml += '<p>'+post_body+'</p>';
 			postHtml += '</div>';
