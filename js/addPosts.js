@@ -2,6 +2,8 @@
 
 // I'm just going to make this global
 posts = [];
+numberOfPosts = 0;
+folder = "";
 
 function loadPosts(folder, number){
 	numberOfPosts = number;
