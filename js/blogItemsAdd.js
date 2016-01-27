@@ -34,7 +34,7 @@ function blog_set_posts(post_number) {
 			console.log(posts.length, post_number, numberOfPosts);
 			if ((posts.length) == numberOfPosts) {
 				var html = "";
-				for	(var index = 0; index < posts.length; index++) {
+				for	(var index = posts.length-1; index >= 0; index--) {
 					html += posts[index];
 				}
 				$("#blogPostsSection").html(html);	
