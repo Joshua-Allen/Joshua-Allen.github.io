@@ -21,6 +21,8 @@ function set_posts(post_number) {
 	// get the real page location
 	var xml = folder+"/posts/"+pageVar+"/info.xml";
 	
+	console.log(folder);
+	
 	//
 	var xmlhttp;
 	if (window.XMLHttpRequest) {

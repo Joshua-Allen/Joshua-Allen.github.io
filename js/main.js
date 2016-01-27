@@ -70,7 +70,7 @@ function page_loading_compleat(){
 	// make footer visable
 	document.getElementById("footer").style.visibility = "visible";
 	
-	if (pageVar != "Home"){
+	if (pageVar != "Home" && postVar == "-1"){
 		loadPosts(pageVar, 2);
 	}
 }
