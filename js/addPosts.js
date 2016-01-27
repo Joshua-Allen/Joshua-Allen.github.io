@@ -63,7 +63,6 @@ function createPostSection(xml, post) {
 	if (img != "0"){
 		post_image = folder+"/posts/post"+post+"/images/"+img;
 	}
-	console.log(img, post_image);
 	
 	
 	var postHtml = "";
