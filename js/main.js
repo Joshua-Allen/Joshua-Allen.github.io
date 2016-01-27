@@ -75,6 +75,10 @@ function page_loading_compleat(){
 	}
 }
 
+function getNumberOfPosts(){
+	
+}
+
 // stuff to fix the page
 //////////////////////////////////////////////////////////////////////////
 if (window.addEventListener) {
