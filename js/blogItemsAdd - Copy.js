@@ -1,49 +1,45 @@
 //console.log(c);
 
-// I'm just going to make this global
-posts = [];
-
 $(document).ready(function() {
-	var numberOfPosts = 2;
-	for(var i=0; i<numberOfPosts; i++){
-		blog_set_posts(i);
-	}
+	blog_set_posts(2);
 });
 
 // load the posts xml
-function blog_set_posts(post_number) {
-	
-	var pageVar = "post"+post_number;
-	
-	// get the real page location
-	var xml = "Blog/posts/"+pageVar+"/info.xml";
-	
-	//
-	var xmlhttp;
-	if (window.XMLHttpRequest) {
-		xmlhttp=new XMLHttpRequest();
-	} else {
-		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	
-	xmlhttp.onreadystatechange = function() {
-		// wait to get the post
-		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-			
-			posts[post_number] = blog_createPostSection(xmlhttp.responseXML, post_number-1);
-			console.log(post_number);
-			if ((posts.length-1) == numberOfPosts) {
-				var html = "";
-				for	(var index = 1; index < posts.length; index++) {
-					html += posts[index];
+function blog_set_posts(numberOfPosts) {
+	var posts = [];
+	for(var i=0; i<numberOfPosts; i++){
+		var pageVar = "post"+i;
+		
+		// get the real page location
+		var xml = "Blog/posts/"+pageVar+"/info.xml";
+		
+		//
+		var xmlhttp;
+		if (window.XMLHttpRequest) {
+			xmlhttp=new XMLHttpRequest();
+		} else {
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		xmlhttp.onreadystatechange = function() {
+			// wait to get the post
+			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				
+				posts[i] = blog_createPostSection(xmlhttp.responseXML, i-1);
+				console.log(i);
+				if ((posts.length-1) == numberOfPosts) {
+					var html = "";
+					for	(var index = 1; index < posts.length; index++) {
+						html += posts[index];
+					}
+					$("#blogPostsSection").html(html);		
 				}
-				$("#blogPostsSection").html(html);		
 			}
 		}
+		
+		xmlhttp.open("GET", xml, true);
+		xmlhttp.send();
 	}
-	
-	xmlhttp.open("GET", xml, true);
-	xmlhttp.send();
 }
 
 
