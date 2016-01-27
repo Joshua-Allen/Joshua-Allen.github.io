@@ -57,7 +57,7 @@ function set_posts(post_number) {
 // add the post to the site
 function createPostSection(xml, post) {
 	
-	var post_image = folder+"/defaultMainImage.png";
+	var post_image = "images/defaultPostImage.png";
 	var post_title = xml.getElementsByTagName("title")[0].childNodes[0].nodeValue;
 	var post_body = xml.getElementsByTagName("body")[0].childNodes[0].nodeValue;
 	var post_date = xml.getElementsByTagName("date")[0].childNodes[0].nodeValue;
