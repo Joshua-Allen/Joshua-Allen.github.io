@@ -2,9 +2,9 @@
 
 // I'm just going to make this global
 posts = [];
+numberOfPosts = 2;
 
 $(document).ready(function() {
-	var numberOfPosts = 2;
 	for(var i=0; i<numberOfPosts; i++){
 		blog_set_posts(i);
 	}
@@ -32,7 +32,7 @@ function blog_set_posts(post_number) {
 			
 			posts[post_number] = blog_createPostSection(xmlhttp.responseXML, post_number-1);
 			console.log(post_number);
-			if ((posts.length-1) == post_number) {
+			if ((posts.length-1) == numberOfPosts) {
 				var html = "";
 				for	(var index = 1; index < posts.length; index++) {
 					html += posts[index];
