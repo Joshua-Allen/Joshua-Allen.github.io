@@ -70,8 +70,9 @@ function page_loading_compleat(){
 	// make footer visable
 	document.getElementById("footer").style.visibility = "visible";
 	
-	
-	loadPosts(pageVar, 2);
+	if (pageVar != "Home"){
+		loadPosts(pageVar, 2);
+	}
 }
 
 // stuff to fix the page
