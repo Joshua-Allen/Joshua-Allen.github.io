@@ -157,8 +157,8 @@ var code_fix = {
 	fix: function() {
 		var elements = document.getElementsByClassName("code");
 		
+		// for each code tag in the document
 		for(var i=0; i<elements.length; i++) {
-			
 			var element = elements[i];
 			var text = element.innerHTML.split("\n");
 			
@@ -186,5 +186,9 @@ var code_fix = {
 			
 			element.innerHTML = html;
 		}
+	}
+	
+	fix_new: function(){
+		
 	}
 }
