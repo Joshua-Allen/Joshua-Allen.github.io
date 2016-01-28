@@ -187,8 +187,4 @@ var code_fix = {
 			element.innerHTML = html;
 		}
 	}
-	
-	fix_new: function(){
-		
-	}
 }
