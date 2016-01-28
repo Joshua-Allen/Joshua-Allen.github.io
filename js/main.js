@@ -18,7 +18,6 @@ function pageLoad(page, post) {
 	document.getElementById("footer").style.visibility = "hidden";
 }
 
-
 // stuff to show the page
 function set_page() {
 	
@@ -150,6 +149,40 @@ function scrolltop() {
         top = document.documentElement.scrollTop;
     }
     return top;
+}
+
+//////
+function setTab(id, name){
+	var elements = document.getElementsByClassName("tabbed");
+	var tabs;
+	var divs;
+	
+	// finds the correct tabbed element
+	for (var i = 0; i < elements.length; i++) {
+		if (elements[i].id == id){
+			tabs = elements[i].children[0].children;
+			divs = elements[i].children[1].children;
+			break;
+		}
+	}
+	
+	// set the correct tab
+	for (var i = 0; i < tabs.length; i++) {
+		if (tabs[i].id == name){
+			tabs[i].className  = "active";
+		} else {
+			tabs[i].className  = "";
+		}
+	}
+	
+	// set the correct block
+	for (var i = 0; i < divs.length; i++) {
+		if (divs[i].id == name){
+			divs[i].style.display  = "block";
+		} else {
+			divs[i].style.display  = "none";
+		}
+	}
 }
 
 //////
