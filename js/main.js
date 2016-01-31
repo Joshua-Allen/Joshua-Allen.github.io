@@ -69,7 +69,7 @@ function page_loading_compleat(){
 	document.getElementById("footer").style.visibility = "visible";
 	code_fix.fix();
 	
-	if (pageVar != "Home" && pageVar != "AboutMe" && postVar == "-1"){
+	if (pageVar != "Home" && pageVar != "AboutMe" && pageVar != "TestPage"&& postVar == "-1"){
 		getNumberOfPosts();
 		//loadPosts(pageVar, 2);
 	}
