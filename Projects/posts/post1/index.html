@@ -10,7 +10,7 @@
 	<p>
 	First, I made a 2d array where each row is a q and the values in the rows represent the characters "Σ, c, o, n, u, t"
 	</p>
-	<code>
+	<code class="code">
 var Q = [];
 Q.push([0, 1, 0, 0, 0, 0]);
 Q.push([0, 0, 2, 0, 0, 0]);
@@ -21,5 +21,23 @@ Q.push([0, 0, 0, 0, 6, 0]);
 Q.push([0, 0, 0, 0, 0, 7]);
 Q.push([7, 7, 7, 7, 7, 7]);
 	</code>
-	<br><br>
+	<br>
+	<p>
+	You can probably see how everything works now. q0 is the start, when it sees a 'c' it goes to q1 else it will stay at q0.Do this until until there is no more characters and if it is at q7, “coconut” is in the string else it is not.
+	</p>
+	<br>
+</div>
+
+<div class="w3-content w3-border-bottom">
+	<p>
+	Here is what I turned in:
+	</p>
+	<p>
+		DFA input:<br>
+		<input type="text" id="input">
+		<input type="submit" onclick="DFA_start()" value="  Run  ">
+		<br><br>
+		DFA output:<br>
+		<textarea id="output" rows="30" cols="40" readonly></textarea>
+	</p>
 </div>
