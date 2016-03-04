@@ -32,10 +32,129 @@ Q.push([7, 7, 7, 7, 7, 7]);
 	<p>
 	Here is what I turned in:
 	</p>
+	
+
+		<script>
+			var DFA = {
+				this.run = function (
+					// test 1 = a coconut cake
+					// test 2 = a lemon cake
+					
+					//      Σ, c, o, n, u, t
+					// q0 = 0, 1, 0, 0, 0, 0
+					// q1 = 0, 0, 2, 0, 0, 0
+					// q2 = 0, 3, 0, 0, 0, 0
+					// q3 = 0, 0, 4, 0, 0, 0
+					// q4 = 0, 0, 0, 5, 0, 0
+					// q5 = 0, 0, 0, 0, 6, 0
+					// q6 = 0, 0, 0, 0, 0, 7
+					// q7 = 7, 7, 7, 7, 7, 7
+					var Q = [];
+					Q.push([0, 1, 0, 0, 0, 0]);
+					Q.push([0, 0, 2, 0, 0, 0]);
+					Q.push([0, 3, 0, 0, 0, 0]);
+					Q.push([0, 0, 4, 0, 0, 0]);
+					Q.push([0, 0, 0, 5, 0, 0]);
+					Q.push([0, 0, 0, 0, 6, 0]);
+					Q.push([0, 0, 0, 0, 0, 7]);
+					Q.push([7, 7, 7, 7, 7, 7]);
+					
+					var state_start = 0;
+					var state_end = [7]; // an array so if there are more than one
+					
+					var state = 0; // this is just 'q'
+					
+					var token = ""; // the character of the string to look at
+					var token_index = 0; // where in the input string the token came from
+					
+					var in_string = ""; // the string that came from the user
+					var out_string = ""; // the string that will go into the text area when complete
+					
+					var run = true; // if there where an error the loop can exit
+					
+					
+					function DFA_start() {
+						
+						// because I made the variables global I need to reset them whenever this runs
+						state = 0;
+						token_index = 0;
+						out_string = "";
+						run = true;
+					
+						// gets the string from the user
+						in_string = document.getElementById("input").value;
+						
+						// gets the first token
+						next_token();
+						
+						// loop while everything is running smoothly
+						while(run){
+							// displays where it is traversing
+							DFA_update_output();
+							
+							// go to the next state
+							DFA_step();
+
+							// only if there was no error, get the next token
+							if (run){
+								// run again if there is a token.
+								run = next_token();
+							}
+						}
+						
+						// show if it was good or bad
+						DFA_end();
+						
+						// set the text area
+						document.getElementById("output").value = out_string;
+					}
+					
+					DFA_start();
+
+					function DFA_step() {
+						// I would like to not do it like this but because of the state
+						// that is all of the ASCII set, it would be too time consuming
+						switch(token){
+							case 'c': state = Q[state][1]; break;
+							case 'o': state = Q[state][2]; break;
+							case 'n': state = Q[state][3]; break;
+							case 'u': state = Q[state][4]; break;
+							case 't': state = Q[state][5]; break;
+							default:  state = Q[state][0]; break;
+						}
+					}
+					
+					// returns false if no token to get
+					function next_token() {
+						if (token_index == in_string.length){
+							return false;
+						}
+						token = in_string.charAt(token_index++);
+						return true;
+					}
+					
+					function DFA_update_output() {
+						out_string += "In q" + state + " with the token '" + token +"' \n";
+					}
+					
+					function DFA_end() {
+						// looks to see if the state is in the array of accept states
+						if (state_end.indexOf(state) == -1){
+							out_string += "Fail \n";
+						} else {
+							out_string += "Success \n";
+						}
+						
+					}
+				);
+			};
+			
+		</script>
+	
 	<p>
 		DFA input:<br>
 		<input type="text" id="input">
-		<input type="submit" onclick="DFA_start()" value="  Run  ">
+		<input type="submit" onclick="DFA.run()" value="  Run  ">
 		<br><br>
 		DFA output:<br>
 		<textarea id="output" rows="30" cols="40" readonly></textarea>
