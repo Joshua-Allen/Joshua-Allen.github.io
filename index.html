@@ -1,78 +1,365 @@
 <!DOCTYPE html>
-
 <html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-	<meta charset="UTF-8">
-	<script src="blockly/blockly_compressed.js"></script>
-	<script src="blockly/blocks_compressed.js"></script>
-	<script src="blockly/msg/js/en.js"></script>
-	
-	<xml id="toolbox" style="display: none">
-		<block type="controls_if"></block>
-		<block type="controls_repeat_ext"></block>
-		<block type="logic_compare"></block>
-		<block type="math_number"></block>
-		<block type="math_arithmetic"></block>
-		<block type="text"></block>
-		<block type="text_print"></block>
-	</xml>
-	
-	<script>
-		function injectBlockly() {
-			var blocklyArea = document.getElementById('blocklyArea');
-			var blocklyDiv = document.getElementById('blocklyDiv');
-			var workspace = Blockly.inject(blocklyDiv,
-				{toolbox: document.getElementById('toolbox')});
-			var onresize = function(e) {
-				// Compute the absolute coordinates and dimensions of blocklyArea.
-				var element = blocklyArea;
-				var x = 0;
-				var y = 0;
-				do {
-					x += element.offsetLeft;
-					y += element.offsetTop;
-					element = element.offsetParent;
-				} while (element);
-				// Position blocklyDiv over blocklyArea.
-				blocklyDiv.style.left = x + 'px';
-				blocklyDiv.style.top = y + 'px';
-				blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
-				blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
-			};
-			window.addEventListener('resize', onresize, false);
-			onresize();
-			Blockly.svgResize(workspace);
-		}
-	</script>
-	
-	<style>
-		html, body {
-		  height: 100%;
-		  margin: 0;
-		}
-		body {
-		  background-color: #fff;
-		  font-family: sans-serif;
-		  overflow: hidden;
-		}
-		table {
-		  height: 100%;
-		  width: 100%;
-		}
-		#blocklyArea {
-		  height: 99%;
-		}
-	</style>
+<title>Joshua G. Allen</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="javascript.js"></script>
 </head>
 
-<body onload="injectBlockly()">
-	  <table>
-		<tr>
-		  <td id="blocklyArea"></td>
-		</tr>
-	  </table>
-	<div id="blocklyDiv" style="position: absolute"></div>
+<body>
+	<div class="mainLeft">
+		<img class="picture" src="images/me.jpg" alt="me">
+		<div class="contact">
+			<p>2419 Drifting Leaf Dr,<br>Cedar Park, TX 78613</p><br>
+			<p>(928) 919-0180</p><br>
+			<p>Joshuaallen64@gmail.com</p><br>
+			<a href="https://www.linkedin.com/in/joshua-allen-ab91a556/">Linkedin</a>
+		</div>
+	</div>
+	<div class="mainRight">
+	
+		<!-- -------------- -->
+		<div class="topBar">
+			<p class="topBarName">Joshua G. Allen</p>
+			<ul class="topBarNavBar">
+			  <li><a id="About_link" href="#">About</a></li>
+			  <li><a id="Skills_link" href="#">Skills</a></li>
+			  <li><a id="Experience_link" href="#">Experience</a></li>
+			  <li><a id="Education_link" href="#">Education</a></li>
+			  <!-- <li><a id="Projects_link" href="#">Projects</a></li> -->
+			</ul>
+		</div>
+		
+		<!-- -------------- -->
+		<div class="content">
+			
+			<div class ="content_block"> <!-- About -->
+				<p class="contentTitle" id="About">About</p>
+				<p class="about">Dependable, driven and results oriented programmer with a strong understanding of core and advanced programming concepts. </p>
+			</div>
+
+			<div class ="content_block"> <!-- Skills -->
+				<p class="contentTitle" id="Skills">Skills And Strengths</p>
+				<div class="subBlock"> <!-- Languages -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Languages</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left">
+							&#8226; GML <br>
+							&#8226; C# <br>
+							&#8226; C++ <br>
+							&#8226; CSS <br>
+						</p>
+						<p class="subBlock_content_center">
+							&#8226; Java <br>
+							&#8226; Python <br>
+							&#8226; GDScript <br>
+							&#8226; SQL <br>	
+						</p>
+						<p class="subBlock_content_right">
+							&#8226; C <br>
+							&#8226; JavaScript <br>
+							&#8226; HTML5 <br>
+						</p>
+					</div>
+				</div>
+				<div class="subBlock"> <!-- Software -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Software</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left">
+							&#8226; GM Studio <br>
+							&#8226; Godot <br>
+							&#8226; Blinder <br>
+							&#8226; GitHub <br>
+						</p>
+						<p class="subBlock_content_center">
+							&#8226; Unity <br>
+							&#8226; NetBeans <br>
+							&#8226; MS Office <br>
+							&#8226; Tortoise SVN <br>
+						</p>
+						<p class="subBlock_content_right">
+							&#8226; Eclipse <br>
+							&#8226; Visual Studio <br>
+							&#8226; Cloud 9 <br>
+						</p>
+					</div>
+				</div>
+				<div class="subBlock"> <!-- Versatility -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Versatility</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left">Experience working on a variety of game mechanics, demonstrated ability to apply programming skills to AI development, graphics, game architecture and game play. Collaboration with programmer and non-programmer team members to develop a standardized pipeline. Evaluate programming code for efficiency, debugging and quality assurance.</p>
+					</div>
+				</div>
+				<div class="subBlock"> <!-- Design and Development -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Design and Development</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left">Writing of detailed technical specifications, including component-based architecture, object-oriented architecture, functional specifications, flow-charting, class structures, and interface design.Able to find multiple solutions to a single problem, determining the pros and cons of each, implementing the optimal solution, and thoroughly testing. Maintaining and upgrading legacy code to work with newer systems. </p>
+					</div>
+				</div>
+				<div class="subBlock"> <!-- Leadership -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Leadership</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left">Experienced team leader, ability to lead and organize technically demanding projects. Plan tasks according to understanding, ability and schedule of individual team members.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class ="content_block"> <!-- Work Experience -->
+				<p class="contentTitle" id="Experience">Work Experience</p>
+				
+				<div class ="subBlock"> <!-- Zazmo Arcade Pack -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Zazmo Arcade Pack</p>
+						<p class="subBlock_title_right">Game - GML</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_links">
+							Xbox<br>
+							<a href="https://store.steampowered.com/app/770320/Zazmo_Arcade_Pack/">Steam</a>
+						</p>
+						<p class="subBlock_content_left">A variety pack of five arcade games. Each of the games has an assortment of fully featured game modes with a focus on multiplayer cooperation and competition. While developing Zazmo, the goal was to finish production as fast as possible but while still keeping everything at a high standard of quality. <br><br>
+						As sole programmer for this project my main achievements are: <br>
+&emsp;&emsp;&emsp; &#8226; Simultaneous development for both steam and Xbox one. <br>
+&emsp;&emsp;&emsp; &#8226; Collaborated with artists to develop a development pipeline. <br>
+&emsp;&emsp;&emsp; &#8226; Five endless arcade games.<br>
+&emsp;&emsp;&emsp; &#8226; Online leaderboards for Steam and Xbox one.<br>
+&emsp;&emsp;&emsp; &#8226; Robust user input handling for multiple players.<br>
+						</p>
+					</div>
+				</div>
+				
+				<div class ="subBlock"> <!-- Boss 101 -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Boss 101</p>
+						<p class="subBlock_title_right">Game - GML</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_links">
+							Xbox<br>
+							<a href="https://store.steampowered.com/app/380920/Boss_101/">Steam</a>
+						</p>
+						<p class="subBlock_content_left">A side scrolling shooter game that incorporates many different genres. The main feature of the game is the fact that there are 40 bosses with five parts each, each boss part is mixed up creating an almost unlimited amount of ways to play. The AI to make it work turned out be be really advanced because all the boss parts had to work with all the other parts while still being fun to play.  <br><br>
+						As sole programmer for this project my main achievements are: <br>
+&emsp;&emsp;&emsp; &#8226; Simultaneous development for both steam and Xbox one. <br>
+&emsp;&emsp;&emsp; &#8226; Sound and music editing to work with an advanced audio system.<br>
+&emsp;&emsp;&emsp; &#8226; Collaborated with artists to develop a development pipeline.<br>
+&emsp;&emsp;&emsp; &#8226; Designed and implemented an advanced AI algorithm.<br>
+&emsp;&emsp;&emsp; &#8226; Robust dialogue system.<br>
+&emsp;&emsp;&emsp; &#8226; Fully featured cinematic system.<br>
+&emsp;&emsp;&emsp; &#8226; 4 sub-games.<br>
+						</p>
+					</div>
+				</div>
+				
+				<div class ="subBlock"> <!-- Editor / debugger for Boss 101 -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Editor / debugger for Boss 101</p>
+						<p class="subBlock_title_right">App - Java</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_links">
+						</p>
+						<p class="subBlock_content_left">An advanced editor that allows for editing core systems for the game Boss 101. Communicated with the game using networking that allows for a team to edit values from anywhere. The tool greatly increased production time by allowing for instant changes to the game while it was running. <br><br> 
+						As sole programmer for this project my main achievements are:<br>
+&emsp;&emsp;&emsp; &#8226; Parse, edit, and save JSON files in a easy to read format.<br>
+&emsp;&emsp;&emsp; &#8226; Display simple analytical data.<br>
+&emsp;&emsp;&emsp; &#8226; A fully featured particle editor that used a custom format.<br>
+&emsp;&emsp;&emsp; &#8226; A easy to use value editor that made changing values easy.<br>
+&emsp;&emsp;&emsp; &#8226; A save file editor. <br><br>
+						After each file change the editor would tell the game to reload the file.
+						</p>
+					</div>
+				</div>
+				
+				<div class ="subBlock" style="display: none;"> <!-- Class Clown -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">Class Clown</p>
+						<p class="subBlock_title_right">Game - HTML5</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left"></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class ="content_block"> <!-- Education -->
+				<p class="contentTitle" id="Education">Education</p>
+				
+				<!-- B.S. in Computer Science -->
+				<div class ="subBlock">
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">B.S. in Computer Science</p>
+						<p class="subBlock_title_center">University of West Florida</p>
+						<p class="subBlock_title_right">April 2016</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left">The UWF computer science curriculum focused heavily on data structures, algorithms, networking, paradigms of programming languages, and a variety of maths. Each assignment project was programed in c except for assignments that focused on a specific language.</p>
+					</div>
+				</div>
+				<!-- Lead programmer  -->
+				<div class ="subBlock">
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">AI Research Group Lead Programmer</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left">While at UWF I was in the AI research group and because the lead programer of two projects. Lead and directly managed a team of over 20 students. Rutenly volunteered to run workshops on programming AI. </p>
+					</div>
+				</div>
+				
+				
+			</div>
+						
+			<div class ="content_block" style="display: none;"> <!-- Projects -->
+				<p class="contentTitle" id="Projects">Projects</p>
+				
+				<div class="subBlock"> <!-- emulator -->
+					<div class="subBlock_title">
+						<p class="subBlock_title_left">GBC Emulator</p>
+					</div>
+					<div class="subBlock_content">
+						<p class="subBlock_content_left"></p>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!-- Spacer -->
+			<div>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+			
+		</div>
+	</div>
 </body>
 
+<script>
+document.getElementById('About_link').onclick = to_About;
+document.getElementById('Skills_link').onclick = to_Skills;
+document.getElementById('Education_link').onclick = to_Education;
+document.getElementById('Experience_link').onclick = to_Experience;
+document.getElementById('Projects_link').onclick = to_Projects;
+
+
+function to_About() {
+  EPPZScrollTo.scrollVerticalToElementById('About', 20);
+  return false;
+}
+function to_Education() {
+  EPPZScrollTo.scrollVerticalToElementById('Education', 20);
+  return false;
+}
+function to_Skills() {
+  EPPZScrollTo.scrollVerticalToElementById('Skills', 20);
+  return false;
+}
+function to_Experience() {
+  EPPZScrollTo.scrollVerticalToElementById('Experience', 20);
+  return false;
+}
+function to_Projects() {
+  EPPZScrollTo.scrollVerticalToElementById('Projects', 20);
+  return false;
+}
+
+</script>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
